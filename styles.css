@@ -11695,5 +11695,27 @@ textarea.form-control-lg {
   display: none;
 }
 
+#portfolio{
+  margin-top: 6rem;
+  font-size: 8vw;
+}
 
+#projects{
+  font-size: 2vw;
+  margin-bottom: 3rem;
+}
+
+#main-section{
+  height: 80rem;
+  width: 100%;
+}
+
+#arrow-button{
+  color: white;
+
+}
+#arrow-button:hover{
+  color: red;
+
+}
 /*# sourceMappingURL=bootstrap.min.css.map */
