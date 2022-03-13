@@ -60,9 +60,13 @@
   --bs-body-bg: #fff
 }
 
-.highlight{
-  color:red;
+
+
+
+.highlight {
+  color: red;
 }
+
 *, ::after, ::before {
   box-sizing: border-box
 }
@@ -292,6 +296,7 @@ figure {
 img, svg {
   vertical-align: middle
 }
+
 
 table {
   caption-side: bottom;
@@ -11650,6 +11655,39 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important
   }
+
+
 }
+
+
+.gif-row{
+  width: 100%;
+}
+.gif-row img {
+  cursor: pointer;
+    width: inherit;
+}
+
+.gif-row .gif-file {
+  width: inherit;
+  display: none;
+}
+
+.image-links{
+  width: inherit;
+}
+#gifs-rows{
+  width: 100%;
+}
+#gifs-rows img {
+  cursor: pointer;
+    width: inherit;
+}
+
+#gifs-rows .gif-file {
+  width: inherit;
+  display: none;
+}
+
 
 /*# sourceMappingURL=bootstrap.min.css.map */
