@@ -11676,6 +11676,12 @@ textarea.form-control-lg {
 .image-links{
   width: inherit;
 }
+#profile-pic{
+  width: 100px;
+  height: 100px;
+  border-radius: 75px;
+  margin: 5% 5% 5% 5%
+}
 #gifs-rows{
   width: 100%;
 }
