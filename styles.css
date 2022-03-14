@@ -11685,6 +11685,7 @@ textarea.form-control-lg {
 }
 #name{
   cursor: default;
+  font-size: 2.5rem;
 }
 #gifs-rows{
   width: 100%;
@@ -11716,10 +11717,70 @@ textarea.form-control-lg {
 
 #arrow-button{
   color: white;
-
+  animation-duration: 3s;
+  animation-name: fadein;
+  animation-iteration-count: infinite;
 }
 #arrow-button:hover{
   color: red;
+  animation-duration: 3s;
+  animation-name: fadein;
+  animation-iteration-count: infinite;
 
+}
+
+#gif-file-tanks{
+  animation-duration: 2s;
+  animation-name: gif-fadein;
+  animation-iteration-count: 1;
+}
+#gif-file-chess{
+  animation-duration: 2s;
+  animation-name: gif-fadein;
+  animation-iteration-count: 1;
+}
+#gif-file-fulkerson{
+  animation-duration: 2s;
+  animation-name: gif-fadein;
+  animation-iteration-count: 1;
+}
+#gif-file-graph{
+  animation-duration: 2s;
+  animation-name: gif-fadein;
+  animation-iteration-count: 1;
+}
+#gif-file-critterworld{
+  animation-duration: 2s;
+  animation-name: gif-fadein;
+  animation-iteration-count: 1;
+}
+#gif-file-connect4{
+  animation-duration: 2s;
+  animation-name: gif-fadein;
+  animation-iteration-count: 1;
+}
+@keyframes fadein {
+  from {
+    opacity: .1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.1;
+  }
+}
+
+@keyframes gif-fadein{
+  from {
+    opacity: 0;
+
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=bootstrap.min.css.map */
