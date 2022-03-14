@@ -11715,6 +11715,12 @@ textarea.form-control-lg {
   width: 100%;
 }
 
+#sub-main-section{
+
+  animation-duration: 1s;
+  animation-name: slideup;
+  animation-iteration-count: 1;
+}
 #arrow-button{
   color: white;
   animation-duration: 3s;
@@ -11781,6 +11787,20 @@ textarea.form-control-lg {
 
   to {
     opacity: 1;
+  }
+}
+
+@keyframes slideup{
+  from {
+    opacity: 0;
+    margin-top: 100%;
+    position: absolute;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: 0%;
+    position: inherit;
   }
 }
 /*# sourceMappingURL=bootstrap.min.css.map */
