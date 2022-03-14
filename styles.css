@@ -11687,6 +11687,13 @@ textarea.form-control-lg {
   cursor: default;
   font-size: 2.5rem;
 }
+#underscore{
+  cursor: default;
+  font-size: 3rem;
+    animation-duration: 2.5s;
+    animation-name: underscorefade;
+    animation-iteration-count: infinite;
+}
 #gifs-rows{
   width: 100%;
 }
@@ -11716,7 +11723,6 @@ textarea.form-control-lg {
 }
 
 #sub-main-section{
-
   animation-duration: .5s;
   animation-name: slideup;
   animation-iteration-count: 1;
@@ -11801,6 +11807,23 @@ textarea.form-control-lg {
     opacity: 1;
     margin-top: 0%;
     position: inherit;
+  }
+}
+
+@keyframes underscorefade {
+  from {
+    opacity: 1;
+  }
+
+  25%{
+      opacity: 1;
+  }
+  75% {
+    opacity: .1;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=bootstrap.min.css.map */
