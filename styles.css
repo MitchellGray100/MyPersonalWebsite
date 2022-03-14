@@ -11717,7 +11717,7 @@ textarea.form-control-lg {
 
 #sub-main-section{
 
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-name: slideup;
   animation-iteration-count: 1;
 }
