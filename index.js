@@ -1,3 +1,13 @@
+$("img", "#gifs-rows-Uno").hover(function() {
+  $('#preset-file-Uno').toggle();
+  $('#gif-file-Uno').toggle();
+  $('#gif-file-Uno').attr("src", "images/Uno/photo2.png");
+});
+$("img", "#gifs-rows-LinearRegression").hover(function() {
+  $('#preset-file-LinearRegression').toggle();
+  $('#gif-file-LinearRegression').toggle();
+  $('#gif-file-LinearRegression').attr("src", "images/LinearRegression/gif3.gif");
+});
 $("img", "#gifs-rows-critterworld").hover(function() {
   $('#preset-file-critterworld').toggle();
   $('#gif-file-critterworld').toggle();
