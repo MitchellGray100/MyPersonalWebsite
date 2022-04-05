@@ -6,7 +6,7 @@ $("img", "#gifs-rows-Uno").hover(function() {
 $("img", "#gifs-rows-LinearRegression").hover(function() {
   $('#preset-file-LinearRegression').toggle();
   $('#gif-file-LinearRegression').toggle();
-  $('#gif-file-LinearRegression').attr("src", "images/LinearRegression/gif3.gif");
+  $('#gif-file-LinearRegression').attr("src", "images/LinearRegression/gif4.gif");
 });
 $("img", "#gifs-rows-critterworld").hover(function() {
   $('#preset-file-critterworld').toggle();
