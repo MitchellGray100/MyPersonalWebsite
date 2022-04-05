@@ -1,7 +1,7 @@
 $("img", "#gifs-rows-Uno").hover(function() {
   $('#preset-file-Uno').toggle();
   $('#gif-file-Uno').toggle();
-  $('#gif-file-Uno').attr("src", "images/Uno/photo2.png");
+  $('#gif-file-Uno').attr("src", "images/Uno/photo2.PNG");
 });
 $("img", "#gifs-rows-LinearRegression").hover(function() {
   $('#preset-file-LinearRegression').toggle();
