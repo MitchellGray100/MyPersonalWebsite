@@ -1,3 +1,8 @@
+$("img", "#gifs-rows-Egos").hover(function() {
+  $('#preset-file-Egos').toggle();
+  $('#gif-file-Egos').toggle();
+  $('#gif-file-Egos').attr("src", "images/Egos/Bootup.gif");
+});
 $("img", "#gifs-rows-Uno").hover(function() {
   $('#preset-file-Uno').toggle();
   $('#gif-file-Uno').toggle();

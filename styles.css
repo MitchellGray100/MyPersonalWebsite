@@ -11781,6 +11781,11 @@ textarea.form-control-lg {
   animation-name: gif-fadein;
   animation-iteration-count: 1;
 }
+#gif-file-Egos{
+  animation-duration: 2s;
+  animation-name: gif-fadein;
+  animation-iteration-count: 1;
+}
 @keyframes fadein {
   from {
     opacity: .1;
