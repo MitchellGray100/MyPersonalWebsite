@@ -1,7 +1,7 @@
 $("img", "#gifs-rows-Egos").hover(function() {
   $('#preset-file-Egos').toggle();
   $('#gif-file-Egos').toggle();
-  $('#gif-file-Egos').attr("src", "images/Egos/Bootup.gif");
+  $('#gif-file-Egos').attr("src", "images/Chess/ChessGIF.gif");
 });
 $("img", "#gifs-rows-Uno").hover(function() {
   $('#preset-file-Uno').toggle();
