@@ -11785,6 +11785,14 @@ section#contact form#contactForm :-ms-input-placeholder {
   color: #34ebd2;
 }
 .why-us-one{
-  border-right: 4px;
+  border-right: 4px solid;
   border-color: black;
+  width: 45%;
+  display: flex;
+}
+.why-us-two{
+  border-left: 4px solid;
+  border-color: black;
+  width: 45%;
+  display: flex;
 }
