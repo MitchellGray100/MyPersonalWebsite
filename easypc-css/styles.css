@@ -11782,5 +11782,9 @@ section#contact form#contactForm :-ms-input-placeholder {
   color: #34ebd2;
 }
 .contact-info-heading{
-  color: #ced4da;
+  color: #34ebd2;
+}
+.why-us-one{
+  border-right: 4px;
+  border-color: black;
 }
