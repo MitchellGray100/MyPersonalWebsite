@@ -11785,14 +11785,13 @@ section#contact form#contactForm :-ms-input-placeholder {
   color: #34ebd2;
 }
 .why-us-one{
-  border-right: 4px solid;
-  border-color: black;
+  border-color: #34ebd2;
   width: 45%;
-  display: flex;
+  display: inline-block;
 }
 .why-us-two{
   border-left: 4px solid;
-  border-color: black;
+  border-color: #34ebd2;
   width: 45%;
-  display: flex;
+  display: inline-block;
 }
