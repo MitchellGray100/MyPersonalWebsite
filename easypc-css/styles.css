@@ -641,6 +641,7 @@ progress {
   margin-left: auto;
 }
 
+
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
@@ -11308,6 +11309,11 @@ p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+
+.section-heading{
+  text-decoration: underline;
+  text-decoration-color: #34ebd2;
+}
 .page-section h3.section-subheading, .page-section .section-subheading.h3 {
   font-size: 1rem;
   font-weight: 400;
@@ -11786,12 +11792,14 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 .why-us-one{
   border-color: #34ebd2;
-  width: 45%;
+  width: 49%;
   display: inline-block;
+  vertical-align: top;
 }
 .why-us-two{
   border-left: 4px solid;
   border-color: #34ebd2;
-  width: 45%;
+  width: 49%;
   display: inline-block;
+  vertical-align: top;
 }
