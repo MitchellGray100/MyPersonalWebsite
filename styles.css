@@ -11709,16 +11709,19 @@ textarea.form-control-lg {
 }
 
 #portfolio{
-  margin-top: 6rem;
-  font-size: 8vw;
+
+width: 100%;
+  font-size: 8.5vw;
 }
 
 #projects{
-  font-size: 2vw;
+width: 100%;
+  font-size: 3vw;
   margin-bottom: 3rem;
 }
 
 #main-section{
+  padding-top: 0px;
   height: 80rem;
   width: 100%;
 }
@@ -11729,6 +11732,7 @@ textarea.form-control-lg {
   animation-iteration-count: 1;
 }
 #arrow-button{
+  font-size: 1.5vw;
   color: white;
   animation-duration: 3s;
   animation-name: fadein;
@@ -11843,10 +11847,12 @@ textarea.form-control-lg {
   }
 }
 
-#portfolio{
+.the-hovering{
     animation-duration: 5s;
     animation-name: picIncrease;
     animation-iteration-count: infinite;
+    position:absolute;
+
 }
 
 @keyframes picIncrease {
@@ -11865,3 +11871,25 @@ textarea.form-control-lg {
   }
 }
 /*# sourceMappingURL=bootstrap.min.css.map */
+
+.top-buttons{
+  width = 100%;
+}
+
+.top-buttons-two{
+  font-size: 3vw;
+}
+
+.btn-lg{
+  width: 100vw;
+}
+
+.linkedin-button{
+  display: inline-flex;
+  width: 22vw;
+}
+.github-button{
+  display: inline-flex;
+  width: 22vw;
+
+}
