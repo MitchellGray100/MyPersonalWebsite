@@ -11849,13 +11849,12 @@ width: 100%;
   }
 }
 
-.the-hovering{
+#the-hovering{
     animation-duration: 5s;
     animation-name: picIncrease;
     animation-iteration-count: infinite;
     position:absolute;
-    padding-top: 0;
-    margin-top: 0;
+    padding-top: 0 !important;
 
 }
 
@@ -11903,4 +11902,10 @@ width: 100%;
 }
 html,body{
     overflow-x: hidden;
+}
+
+@media only screen and (max-width: 641px)
+.container {
+    max-width: 360px;
+    margin: 0 auto;
 }
