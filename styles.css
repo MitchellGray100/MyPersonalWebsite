@@ -11732,13 +11732,15 @@ width: 100%;
   animation-iteration-count: 1;
 }
 #arrow-button{
+  cursor: default;
   font-size: 1.5vw;
   color: white;
   animation-duration: 3s;
   animation-name: fadein;
   animation-iteration-count: infinite;
 }
-#arrow-button:hover{
+.fa-angle-down:hover{
+  cursor:pointer;
   color: red;
   animation-duration: 3s;
   animation-name: fadein;
