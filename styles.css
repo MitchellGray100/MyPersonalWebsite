@@ -11694,6 +11694,7 @@ textarea.form-control-lg {
     animation-name: underscorefade;
     animation-iteration-count: infinite;
 }
+
 #gifs-rows{
   width: 100%;
 }
@@ -11839,6 +11840,28 @@ textarea.form-control-lg {
 
   to {
     opacity: 1;
+  }
+}
+
+#portfolio{
+    animation-duration: 5s;
+    animation-name: picIncrease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes picIncrease {
+  from {
+    margin-top: 1rem;
+  }
+
+  50%{
+    margin-top: 2rem;
+  }
+
+
+  to {
+
+    margin-top: 1rem;
   }
 }
 /*# sourceMappingURL=bootstrap.min.css.map */
