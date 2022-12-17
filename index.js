@@ -1,3 +1,8 @@
+$("img", "#gifs-rows-MeetUp").hover(function() {
+  $('#preset-file-MeetUp').toggle();
+  $('#gif-file-MeetUp').toggle();
+  $('#gif-file-MeetUp').attr("src", "images/CornellMeetUp/Map1.PNG");
+});
 $("img", "#gifs-rows-Egos").hover(function() {
   $('#preset-file-Egos').toggle();
   $('#gif-file-Egos').toggle();
