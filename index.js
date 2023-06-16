@@ -1,3 +1,18 @@
+$("img", "#gifs-rows-DBMS").hover(function() {
+  $('#preset-file-DBMS').toggle();
+  $('#gif-file-DBMS').toggle();
+  $('#gif-file-DBMS').attr("src", "images/DBMS/DBMS.PNG");
+});
+$("img", "#gifs-rows-dslabs").hover(function() {
+  $('#preset-file-dslabs').toggle();
+  $('#gif-file-dslabs').toggle();
+  $('#gif-file-dslabs').attr("src", "images/dslabs/dslabs-two.PNG");
+});
+$("img", "#gifs-rows-adopt").hover(function() {
+  $('#preset-file-adopt').toggle();
+  $('#gif-file-adopt').toggle();
+  $('#gif-file-adopt').attr("src", "images/ADOPT/Tree.gif");
+});
 $("img", "#gifs-rows-MeetUp").hover(function() {
   $('#preset-file-MeetUp').toggle();
   $('#gif-file-MeetUp').toggle();
