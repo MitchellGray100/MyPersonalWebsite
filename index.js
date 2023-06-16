@@ -11,7 +11,7 @@ $("img", "#gifs-rows-dslabs").hover(function() {
 $("img", "#gifs-rows-adopt").hover(function() {
   $('#preset-file-adopt').toggle();
   $('#gif-file-adopt').toggle();
-  $('#gif-file-adopt').attr("src", "images/ADOPT/Tree.gif");
+  $('#gif-file-adopt').attr("src", "images/Adopt/Tree.gif");
 });
 $("img", "#gifs-rows-MeetUp").hover(function() {
   $('#preset-file-MeetUp').toggle();
