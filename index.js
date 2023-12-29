@@ -1,3 +1,8 @@
+$("img", "#gifs-rows-Speed").hover(function() {
+  $('#preset-file-Speed').toggle();
+  $('#gif-file-Speed').toggle();
+  $('#gif-file-Speed').attr("src", "images/Speed/ArchitectureDiagram.png");
+});
 $("img", "#gifs-rows-DBMS").hover(function() {
   $('#preset-file-DBMS').toggle();
   $('#gif-file-DBMS').toggle();
