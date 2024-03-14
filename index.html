@@ -44,43 +44,40 @@
 <body style="background-color:black;">
 
   <header>
-    <div class="collapse bg-dark" id="navbarHeader">
+  <div style="background-color: #931F1F;">
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" style="background-color: #931F1F;">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-8 col-md-7 py-4">
-            <h4 class="text-white">About Me</h4>
-            <p class="text-white">I'm a senior CS Major minoring in ORIE at Cornell University in The College of Engineering.<br />
-            I'm looking for a Software Engineering, Database / Cloud Infrastructure, or Distributed Systems job.<br />
-            I previously worked at <a style="color: #931F1F;" href="https://www.geckorobotics.com/">Gecko Robotics</a> as a Software Engineer Intern and </br>
-            <a style="color: #931F1F;" href="https://www.sei.cmu.edu/">CMU SEI</a> as a Devops Engineer Intern. </br>
-              Click <a style="color: #931F1F;" href="https://mitchellgray100.github.io/HTMLPersonalWebsite/">here</a> for About page. </p>
-              <p class="text-white">I also build, upgrade, fix, and clean computers on my website:  <a style="color: #34ebd2;" href="http://EasyPC.mitchellegray.com">EasyPC</a></p>
-          </div>
-          <div  class="col-sm-4 offset-md-1 py-4">
-            <h4 class="text-white">Contact</h4>
-            <ul class="list-unstyled">
-              <li><a href="https://Github.com/MitchellGray100" class="text-white highlight">Github</a></li>
-              <li><a href="https://www.linkedin.com/in/mitchellegray/" class="text-white highlight">LinkedIn</a></li>
-              <li style="color: #931F1F;">meg346@cornell.edu</li>
-            </ul>
-          </div>
+        <div class="navbar-brand d-flex align-items-center highlight">
+          <!-- SVG element removed for simplicity -->
+          <img id="profile-pic" src="images/PFP.jpg" alt="Mitchell Gray">
+          <strong id="name">Mitchell Gray</strong>
+          <strong id="underscore">_</strong>
         </div>
-      </div>
-    </div>
-    <div style="background-color:#931F1F;" class="navbar navbar-dark shadow-sm">
-      <div class="container">
-        <div href="#" class="navbar-brand d-flex align-items-center highlight">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24">
-            <img id="profile-pic" src="images/PFP.jpg" alt="">
-            <strong id="name">Mitchell Gray</strong>
-            <strong id="underscore">_</strong>
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="https://mitchellgray100.github.io/MyPersonalWebsite/index.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://mitchellgray100.github.io/HTMLPersonalWebsite/about.html">About Me</a>
+            </li></li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://mitchellgray100.github.io/MyPersonalWebsite/resume.html">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://mitchellgray100.github.io/MyPersonalWebsite/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </header>
+    </nav>
+  </div>
+</header>
+
 
   <main>
 
@@ -450,7 +447,7 @@
       <p class="float-end mb-1">
         <a style="color: #931F1F;" class="highlight" href="#">Back to top</a>
       </p>
-      <p style="color: #931F1F;" class="mb-1">Mitchell Gray ©2023</p>
+      <p style="color: #931F1F;" class="mb-1">Mitchell Gray ©2024</p>
       <p style="color: #931F1F;" class="mb-0">meg346@cornell.edu</p>
     </div>
   </footer>
