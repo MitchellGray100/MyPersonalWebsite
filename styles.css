@@ -12148,3 +12148,16 @@ html,body{
   margin-top: 1.5rem;
   margin-bottom: 0;
 }
+
+/* Initial state */
+.timeline-panel {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* State when the element is in the viewport */
+.timeline-panel.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
