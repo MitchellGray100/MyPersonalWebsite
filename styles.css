@@ -12118,3 +12118,17 @@ html,body{
     padding: 0 100px 20px 20px;
   }
 }
+
+.team-member {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.team-member img {
+  width: 14rem;
+  height: 14rem;
+  border: 0.5rem solid #6c757d;
+}
+.team-member h4, .team-member .h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
