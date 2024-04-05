@@ -11893,7 +11893,9 @@ textarea.form-control-lg {
     animation-iteration-count: infinite;
     position:absolute;
     padding-top: 0 !important;
-
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @keyframes picIncrease {
