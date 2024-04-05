@@ -12151,9 +12151,16 @@ html,body{
 
 /* Initial state */
 .timeline-panel {
+  margin-top: 25px;
+  margin-bottom: 25px;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.timeline-inverted {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 /* State when the element is in the viewport */
