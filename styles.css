@@ -11726,10 +11726,9 @@ width: 100%;
   width: 100%;
 }
 
-/* Adjust height for screens narrower than 768px */
 @media (max-width: 950px) {
   #main-section {
-    height: auto; /* Or set a specific smaller height */
+    height: auto;
     min-height: 600px;
   }
 }
