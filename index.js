@@ -1,3 +1,18 @@
+$("img", "#gifs-rows-flightcascade").hover(function() {
+  $('#preset-file-flightcascade').toggle();
+  $('#gif-file-flightcascade').toggle();
+  $('#gif-file-flightcascade').attr("src", "images/FlightCascade/image2.png");
+});
+$("img", "#gifs-rows-sparsematrix").hover(function() {
+  $('#preset-file-sparsematrix').toggle();
+  $('#gif-file-sparsematrix').toggle();
+  $('#gif-file-sparsematrix').attr("src", "images/SparseMatrix/image2.png");
+});
+$("img", "#gifs-rows-pointcloud").hover(function() {
+  $('#preset-file-pointcloud').toggle();
+  $('#gif-file-pointcloud').toggle();
+  $('#gif-file-pointcloud').attr("src", "images/PointCloud/image2.png");
+});
 $("img", "#gifs-rows-nosi").hover(function() {
   $('#preset-file-nosi').toggle();
   $('#gif-file-nosi').toggle();
