@@ -1,3 +1,8 @@
+$("img", "#gifs-rows-nosi").hover(function() {
+  $('#preset-file-nosi').toggle();
+  $('#gif-file-nosi').toggle();
+  $('#gif-file-nosi').attr("src", "images/Nosi/NosiImage2.png");
+});
 $("img", "#gifs-rows-Speed").hover(function() {
   $('#preset-file-Speed').toggle();
   $('#gif-file-Speed').toggle();
