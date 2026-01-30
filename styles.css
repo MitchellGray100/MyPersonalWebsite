@@ -12127,6 +12127,18 @@ html,body{
   margin-bottom: 0;
 }
 
+.timeline-text-card {
+  padding: 1.25rem 1.5rem;
+  border-radius: 1rem;
+  background: var(--brand-gray-900);
+  border: 1px solid rgba(178, 30, 30, 0.35);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+.timeline-text-card .text-muted {
+  color: var(--brand-gray-300);
+}
+
 @media (min-width: 768px) {
   .timeline:before {
     left: 50%;
