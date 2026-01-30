@@ -12400,6 +12400,7 @@ html,body{
 
 @media (max-width: 768px) {
   #the-hovering {
+    animation: none;
     margin-left: 0;
     margin-right: 0;
     padding-left: 0.75rem;

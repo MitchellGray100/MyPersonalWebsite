@@ -162,7 +162,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const scrollTarget = document.getElementById('scroll-spot');
   const mainSection = document.getElementById('main-section');
   let autoScrollTriggered = false;
-  const initialAtTop = window.scrollY <= 2;
+  const topThreshold = 5;
+  let allowAutoScroll = window.scrollY <= topThreshold;
 
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -184,12 +185,12 @@ document.addEventListener("DOMContentLoaded", function() {
   fadeInOnScroll();
 
   function shouldAutoScrollFromTop() {
-    if (!scrollTarget || !mainSection || autoScrollTriggered) {
+    if (!scrollTarget || !mainSection || autoScrollTriggered || !allowAutoScroll) {
       return false;
     }
     const scrollThreshold = 200;
     const hasScrolledEnough = window.scrollY >= scrollThreshold;
-    return initialAtTop && hasScrolledEnough;
+    return hasScrolledEnough;
   }
 
   function handleTopScroll(event) {
@@ -197,10 +198,26 @@ document.addEventListener("DOMContentLoaded", function() {
       return;
     }
     autoScrollTriggered = true;
+    allowAutoScroll = false;
     scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   window.addEventListener('scroll', handleTopScroll, { passive: true });
+  window.addEventListener('load', () => {
+    if (window.scrollY > topThreshold) {
+      allowAutoScroll = false;
+    }
+  });
+  window.addEventListener('pageshow', () => {
+    if (window.scrollY > topThreshold) {
+      allowAutoScroll = false;
+    }
+  });
+  setTimeout(() => {
+    if (window.scrollY > topThreshold) {
+      allowAutoScroll = false;
+    }
+  }, 250);
 });
 
 
