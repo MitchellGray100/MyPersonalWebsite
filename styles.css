@@ -11663,19 +11663,37 @@ textarea.form-control-lg {
 
 .gif-row{
   width: 100%;
+  background: var(--brand-gradient);
+  padding: 2px;
+  border-radius: 18px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
 }
 .gif-row img {
   cursor: pointer;
-    width: inherit;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
 }
 
 .gif-row .gif-file {
-  width: inherit;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
   display: none;
 }
 
 .image-links{
   width: inherit;
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.image-links img,
+.image-links .gif-file {
+  border-radius: 14px;
+  background: var(--brand-black);
 }
 #profile-pic{
   width: 100px;
@@ -11698,10 +11716,29 @@ textarea.form-control-lg {
 
 #gifs-rows{
   width: 100%;
+  background: var(--brand-gradient);
+  padding: 2px;
+  border-radius: 18px;
 }
 #gifs-rows img {
   cursor: pointer;
-    width: inherit;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.album .row.row-cols-12 .gif-row img,
+.album .row.row-cols-12 .gif-row .gif-file {
+  height: auto;
+  object-fit: contain;
+}
+
+.album .row:not(.row-cols-12) .gif-row img,
+.album .row:not(.row-cols-12) .gif-row .gif-file {
+  height: 360px;
+  object-fit: fill;
+  background: var(--brand-black);
 }
 
 #gifs-rows .gif-file {
@@ -11713,12 +11750,12 @@ textarea.form-control-lg {
   padding-right: 0px;
   padding-left: 0px;
   width: 100%;
-  font-size: 8.5vw;
+  font-size: clamp(3.4rem, 8.5vw, 7.5rem);
 }
 
 #projects{
   width: 100%;
-  font-size: 3vw;
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
   margin-bottom: 3rem;
   padding-left: 0px;
   padding-right: 0px;
@@ -11746,7 +11783,7 @@ textarea.form-control-lg {
 }
 #arrow-button{
   cursor: default;
-  font-size: 1.5vw;
+  font-size: clamp(1.6rem, 2.1vw, 3rem);
   color: white;
   animation-duration: 3s;
   animation-name: fadein;
@@ -11869,7 +11906,7 @@ textarea.form-control-lg {
 
 @keyframes gif-fadein{
   from {
-    opacity: 0;
+    opacity: 0.2;
 
   }
 
@@ -11942,25 +11979,26 @@ textarea.form-control-lg {
   margin-bottom: 3vw;
   padding-left: 0px;
   padding-right: 0px;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 
 .top-buttons-two{
-  font-size: 3vw;
+  font-size: clamp(1.3rem, 2.6vw, 2.1rem);
 }
 
-.btn-lg{
-  width: 100vw;
+.top-buttons .btn-lg{
+  width: clamp(190px, 20vw, 260px);
 }
 
 .linkedin-button{
   display: inline-flex;
-  width: 18vw;
+  width: auto;
 }
 .github-button{
   display: inline-flex;
-  width: 18vw;
-
+  width: auto;
 }
 html,body{
     overflow-x: hidden;
@@ -12251,6 +12289,18 @@ html,body{
   #underscore {
     margin-right: 0;
   }
+
+  .top-buttons {
+    margin-bottom: 1.5rem;
+  }
+
+  .top-buttons .btn-lg {
+    width: min(80vw, 260px);
+  }
+
+  #projects {
+    margin-bottom: 2rem;
+  }
 }
 
 /* Theme polish */
@@ -12267,6 +12317,7 @@ html,body{
   --brand-gray-300: #c8c8d1;
   --brand-white: #f7f7f8;
   --brand-border: rgba(247, 247, 248, 0.08);
+  --brand-gradient: linear-gradient(90deg, var(--brand-black) 0%, #2a0f10 35%, var(--brand-red) 70%, var(--brand-black) 100%);
 }
 
 body {
@@ -12295,7 +12346,7 @@ a:hover {
 }
 
 .navbar-custom {
-  background: linear-gradient(90deg, var(--brand-black) 0%, #2a0f10 35%, var(--brand-red) 70%, var(--brand-black) 100%);
+  background: var(--brand-gradient);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   border-bottom: 1px solid rgba(178, 30, 30, 0.35);
 }
@@ -12317,6 +12368,14 @@ a:hover {
   background-color: var(--brand-gray-900) !important;
 }
 
+.album .row > .col {
+  display: flex;
+}
+
+.album .row > .col > .card {
+  width: 100%;
+}
+
 .bg-dark {
   background-color: var(--brand-gray-900) !important;
 }
@@ -12333,15 +12392,40 @@ a:hover {
 }
 
 .card {
-  background-color: var(--brand-gray-900);
-  border: 1px solid rgba(178, 30, 30, 0.45);
+  position: relative;
+  border-radius: 18px;
+  background: var(--brand-gray-900);
+  overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  height: 100%;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 18px;
+  background: var(--brand-gradient);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 .card .card-body {
   color: var(--brand-white);
 }
 .card .text-secondary {
   color: var(--brand-gray-300) !important;
+}
+
+.album .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.album .card-text {
+  flex: 1;
 }
 
 .btn-primary {
@@ -12387,4 +12471,56 @@ a:hover {
 
 .team-member img {
   border: 0.5rem solid var(--brand-gray-600);
+}
+
+.site-footer {
+  background: linear-gradient(180deg, var(--brand-gray-900) 0%, var(--brand-black) 100%);
+  border-top: 1px solid rgba(178, 30, 30, 0.35);
+  color: var(--brand-gray-300);
+  padding: 2.5rem 0;
+}
+
+.site-footer .footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.site-footer .footer-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.site-footer .footer-name {
+  margin: 0;
+  color: var(--brand-white);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.site-footer .footer-contact {
+  margin: 0;
+  color: var(--brand-gray-300);
+}
+
+.site-footer .footer-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(178, 30, 30, 0.5);
+  color: var(--brand-red);
+  text-decoration: none;
+  background: rgba(178, 30, 30, 0.08);
+  transition: all 0.2s ease;
+}
+
+.site-footer .footer-top:hover {
+  color: var(--brand-white);
+  background: linear-gradient(90deg, rgba(178, 30, 30, 0.3), rgba(178, 30, 30, 0.1));
+  border-color: var(--brand-red-soft);
 }
