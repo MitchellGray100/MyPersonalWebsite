@@ -90,6 +90,20 @@ $("img", "#gifs-rows-chess").hover(function() {
   $('#gif-file-chess').attr("src", "images/Chess/ScalingGIF.gif");
 });
 
+const isTouchDevice = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+if (isTouchDevice) {
+  document.querySelectorAll('.image-links').forEach((link) => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const images = this.querySelectorAll('img');
+      if (images.length > 0) {
+        $(images[0]).trigger('mouseenter');
+      }
+    }, { passive: false });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   const timelinePanels = document.querySelectorAll('.timeline-panel');
   const scrollTarget = document.getElementById('scroll-spot');
