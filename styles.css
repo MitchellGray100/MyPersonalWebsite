@@ -11970,6 +11970,9 @@ html,body{
   font-weight: 500;
   margin-right: 30px;
 }
+.navbar-custom .nav-item:first-child {
+  margin-left: 30px;
+}
 .navbar-brand img {
   height: 40px; 
   width: auto; /* Maintain aspect ratio */
@@ -12187,4 +12190,11 @@ html,body{
 .timeline-panel.in-view {
   opacity: 1;
   transform: translateY(0);
+}
+
+.navbar-custom .navbar-nav {
+  gap: 5rem; /* space between items */
+}
+.navbar-custom .nav-link {
+  margin-right: 0; /* remove old spacing */
 }
