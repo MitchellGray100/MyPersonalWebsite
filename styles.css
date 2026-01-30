@@ -12209,7 +12209,7 @@ html,body{
     width: 100%;
     justify-content: center;
     text-align: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   .navbar-custom .navbar-toggler {
@@ -12232,6 +12232,11 @@ html,body{
   #profile-pic {
     margin-left: 0;
     margin-right: 10px;
+  }
+
+  #name,
+  #underscore {
+    white-space: nowrap;
   }
 }
 
