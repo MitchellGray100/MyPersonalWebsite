@@ -92,14 +92,37 @@ $("img", "#gifs-rows-chess").hover(function() {
 
 const isTouchDevice = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
 if (isTouchDevice) {
+  document.body.classList.add('touch-device');
   document.querySelectorAll('.image-links').forEach((link) => {
-    link.addEventListener('click', function(event) {
+    let touchHandled = false;
+
+    const revealGif = () => {
+      const preset = link.querySelector('img:not(.gif-file)');
+      const gif = link.querySelector('.gif-file');
+      if (preset && gif && gif.style.display !== 'block') {
+        preset.style.display = 'none';
+        gif.style.display = 'block';
+      }
+      link.classList.add('tap-cue-seen');
+    };
+
+    link.addEventListener('touchstart', function(event) {
+      touchHandled = true;
       event.preventDefault();
       event.stopPropagation();
-      const images = this.querySelectorAll('img');
-      if (images.length > 0) {
-        $(images[0]).trigger('mouseenter');
+      revealGif();
+    }, { passive: false });
+
+    link.addEventListener('click', function(event) {
+      if (touchHandled) {
+        touchHandled = false;
+        event.preventDefault();
+        event.stopPropagation();
+        return;
       }
+      event.preventDefault();
+      event.stopPropagation();
+      revealGif();
     }, { passive: false });
   });
 }

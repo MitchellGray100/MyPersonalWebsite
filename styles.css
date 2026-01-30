@@ -11695,6 +11695,44 @@ textarea.form-control-lg {
   border-radius: 14px;
   background: var(--brand-black);
 }
+
+@media (hover: none) and (pointer: coarse) {
+  .image-links {
+    position: relative;
+  }
+
+  .image-links::after {
+    content: "Tap to animate";
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    pointer-events: none;
+    animation: tap-cue-pulse 2.2s ease-in-out infinite;
+  }
+
+  .image-links.tap-cue-seen::after {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+@keyframes tap-cue-pulse {
+  0%, 100% {
+    opacity: 0.75;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
 #profile-pic{
   width: 100px;
   height: 100px;
