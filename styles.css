@@ -12707,6 +12707,75 @@ a:hover {
   }
 }
 
+/* About page */
+.about-hero {
+  padding: 4rem 0 2.5rem;
+  border-bottom: 1px solid rgba(178, 30, 30, 0.25);
+  background: radial-gradient(circle at 12% 20%, rgba(178, 30, 30, 0.25), transparent 55%),
+    radial-gradient(circle at 88% 12%, rgba(217, 58, 58, 0.18), transparent 60%);
+}
+
+.about-hero-inner {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-hero-text {
+  max-width: 560px;
+}
+
+.about-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--brand-red-soft);
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-title {
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  margin-bottom: 0.75rem;
+  color: var(--brand-white);
+}
+
+.about-lead {
+  color: var(--brand-gray-300);
+  font-size: 1.05rem;
+  margin-bottom: 0;
+}
+
+.about-hero-card {
+  padding: 1.5rem 1.75rem;
+  border-radius: 1rem;
+  background: var(--brand-gray-900);
+  border: 1px solid rgba(178, 30, 30, 0.35);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+.about-hero-card-title {
+  margin: 0 0 0.5rem;
+  color: var(--brand-white);
+  font-weight: 600;
+}
+
+.about-hero-card-body {
+  margin: 0;
+  color: var(--brand-gray-300);
+}
+
+@media (min-width: 992px) {
+  .about-hero-inner {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 3rem 0 2rem;
+  }
+}
+
 /* Contact page */
 .contact-main {
   background: linear-gradient(180deg, var(--brand-black) 0%, var(--brand-gray-900) 100%);
