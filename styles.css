@@ -12224,6 +12224,10 @@ html,body{
     width: 100%;
   }
 
+  .navbar-custom .nav-item:first-child {
+    margin-left: 0;
+  }
+
   .navbar-custom .navbar-brand img,
   #profile-pic {
     margin-left: 0;
