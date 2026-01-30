@@ -12263,6 +12263,13 @@ html,body{
   border: 1px solid rgba(178, 30, 30, 0.25);
   box-shadow: 0 18px 32px rgba(0, 0, 0, 0.35);
 }
+.about-profile {
+  margin-top: clamp(2.5rem, 5vw, 4.5rem);
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+.about-intro-section {
+  padding-bottom: clamp(3.5rem, 6vw, 6rem);
+}
 .about-intro-text {
   text-align: center;
   color: var(--brand-white);
@@ -12762,6 +12769,97 @@ a:hover {
 .about-hero-card-body {
   margin: 0;
   color: var(--brand-gray-300);
+}
+
+.courses-table-wrap {
+  background: linear-gradient(140deg, rgba(21, 21, 24, 0.92), rgba(33, 33, 40, 0.85));
+  border-radius: 1.2rem;
+  border: 1px solid rgba(178, 30, 30, 0.35);
+  padding: 1.25rem;
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.35);
+}
+
+.courses-table {
+  margin-bottom: 0;
+  color: var(--brand-white);
+  border-color: rgba(148, 148, 148, 0.2);
+}
+
+.courses-table thead th {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--brand-gray-200);
+  border-bottom: 1px solid rgba(178, 30, 30, 0.4);
+}
+
+.courses-table tbody tr {
+  border-bottom: 1px solid rgba(148, 148, 148, 0.2);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.courses-table tbody tr:last-child {
+  border-bottom: 0;
+}
+
+.courses-table tbody tr:hover {
+  background-color: rgba(178, 30, 30, 0.12);
+}
+
+.courses-table td,
+.courses-table th {
+  padding: 0.85rem 1rem;
+}
+
+.courses-table td:first-child {
+  font-weight: 600;
+  width: 35%;
+  white-space: nowrap;
+}
+
+.honors-table {
+  table-layout: auto;
+}
+
+.honors-table td {
+  white-space: normal;
+}
+.honors-table td:first-child {
+  white-space: normal;
+  width: auto;
+}
+
+@media (max-width: 640px) {
+  .honors-table td,
+  .honors-table th {
+    padding: 0.75rem 0.8rem;
+    word-break: break-word;
+  }
+
+  .honors-table thead {
+    display: none;
+  }
+
+  .honors-table tbody,
+  .honors-table tr,
+  .honors-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .honors-table tr {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(148, 148, 148, 0.2);
+  }
+
+  .honors-table td {
+    padding: 0.35rem 0.8rem;
+  }
+
+  .honors-table td:last-child {
+    color: var(--brand-gray-300);
+  }
 }
 
 @media (min-width: 992px) {

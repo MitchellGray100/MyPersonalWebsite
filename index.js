@@ -91,28 +91,25 @@ $("img", "#gifs-rows-chess").hover(function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-  window.addEventListener('scroll', fadeInOnScroll);
-  
+  const timelinePanels = document.querySelectorAll('.timeline-panel');
+
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    return rect.top < viewportHeight * 0.9 && rect.bottom > 0;
   }
 
   function fadeInOnScroll() {
-    const timelinePanels = document.querySelectorAll('.timeline-panel');
-    
     for (let i = 0; i < timelinePanels.length; i++) {
       if (isInViewport(timelinePanels[i])) {
         timelinePanels[i].classList.add('in-view');
       }
     }
   }
-  
+
+  window.addEventListener('scroll', fadeInOnScroll, { passive: true });
+  window.addEventListener('resize', fadeInOnScroll);
+  window.addEventListener('load', fadeInOnScroll);
   fadeInOnScroll();
 });
 
