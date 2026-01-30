@@ -92,6 +92,10 @@ $("img", "#gifs-rows-chess").hover(function() {
 
 document.addEventListener("DOMContentLoaded", function() {
   const timelinePanels = document.querySelectorAll('.timeline-panel');
+  const scrollTarget = document.getElementById('scroll-spot');
+  const mainSection = document.getElementById('main-section');
+  let autoScrollTriggered = false;
+  const initialAtTop = window.scrollY <= 2;
 
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -111,6 +115,25 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener('resize', fadeInOnScroll);
   window.addEventListener('load', fadeInOnScroll);
   fadeInOnScroll();
+
+  function shouldAutoScrollFromTop() {
+    if (!scrollTarget || !mainSection || autoScrollTriggered) {
+      return false;
+    }
+    const scrollThreshold = 200;
+    const hasScrolledEnough = window.scrollY >= scrollThreshold;
+    return initialAtTop && hasScrolledEnough;
+  }
+
+  function handleTopScroll(event) {
+    if (!shouldAutoScrollFromTop()) {
+      return;
+    }
+    autoScrollTriggered = true;
+    scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  window.addEventListener('scroll', handleTopScroll, { passive: true });
 });
 
 
