@@ -12199,6 +12199,38 @@ html,body{
   margin-right: 0; /* remove old spacing */
 }
 
+@media (max-width: 991.98px) {
+  .navbar-custom > .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar-custom .navbar-brand {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  .navbar-custom .navbar-toggler {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-custom .navbar-collapse {
+    width: 100%;
+  }
+
+  .navbar-custom .navbar-brand img,
+  #profile-pic {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar-custom .navbar-nav {
     gap: 0.75rem;
@@ -12207,6 +12239,6 @@ html,body{
     margin-left: 0;
   }
   #underscore {
-    margin-right: 12px;
+    margin-right: 0;
   }
 }
