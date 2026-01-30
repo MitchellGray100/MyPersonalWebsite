@@ -11963,6 +11963,15 @@ textarea.form-control-lg {
     transform: translateX(50%);
 }
 
+@media (max-width: 768px) {
+  #the-hovering {
+    position: relative;
+    width: 100%;
+    transform: none;
+    left: 0;
+  }
+}
+
 @keyframes picIncrease {
   from {
     margin-top: 1rem;
