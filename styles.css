@@ -11983,6 +11983,7 @@ textarea.form-control-lg {
 .top-buttons {
   display: flex;
   justify-content: center; /* Center flex items horizontally */
+  width: 100%;
   margin-bottom: 3vw;
   padding-left: 0px;
   padding-right: 0px;
