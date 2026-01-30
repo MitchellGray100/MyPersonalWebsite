@@ -95,22 +95,52 @@ if (isTouchDevice) {
   document.body.classList.add('touch-device');
   document.querySelectorAll('.image-links').forEach((link) => {
     let touchHandled = false;
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchMoved = false;
 
-    const revealGif = () => {
+    const toggleGif = () => {
       const preset = link.querySelector('img:not(.gif-file)');
       const gif = link.querySelector('.gif-file');
-      if (preset && gif && gif.style.display !== 'block') {
+      if (!preset || !gif) {
+        return;
+      }
+      const gifVisible = window.getComputedStyle(gif).display !== 'none';
+      if (gifVisible) {
+        gif.style.display = 'none';
+        preset.style.display = 'block';
+      } else {
         preset.style.display = 'none';
         gif.style.display = 'block';
+        link.classList.add('tap-cue-seen');
       }
-      link.classList.add('tap-cue-seen');
     };
 
     link.addEventListener('touchstart', function(event) {
       touchHandled = true;
-      event.preventDefault();
-      event.stopPropagation();
-      revealGif();
+      touchMoved = false;
+      if (event.touches && event.touches[0]) {
+        touchStartX = event.touches[0].clientX;
+        touchStartY = event.touches[0].clientY;
+      }
+    }, { passive: true });
+
+    link.addEventListener('touchmove', function(event) {
+      if (event.touches && event.touches[0]) {
+        const deltaX = Math.abs(event.touches[0].clientX - touchStartX);
+        const deltaY = Math.abs(event.touches[0].clientY - touchStartY);
+        if (deltaX > 8 || deltaY > 8) {
+          touchMoved = true;
+        }
+      }
+    }, { passive: true });
+
+    link.addEventListener('touchend', function(event) {
+      if (!touchMoved) {
+        event.preventDefault();
+        event.stopPropagation();
+        toggleGif();
+      }
     }, { passive: false });
 
     link.addEventListener('click', function(event) {
@@ -122,7 +152,7 @@ if (isTouchDevice) {
       }
       event.preventDefault();
       event.stopPropagation();
-      revealGif();
+      toggleGif();
     }, { passive: false });
   });
 }

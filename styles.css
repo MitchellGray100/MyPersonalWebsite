@@ -11829,6 +11829,7 @@ textarea.form-control-lg {
   animation-iteration-count: infinite;
   padding-left: 0px;
   padding-right: 0px;
+  text-decoration: none;
 }
 .fa-angle-down:hover{
   cursor:pointer;
@@ -11841,7 +11842,10 @@ textarea.form-control-lg {
 
 @media (max-width: 768px) {
   #arrow-button {
-    display: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1.1rem, 6vw, 2rem);
   }
 }
 
@@ -12382,6 +12386,8 @@ html,body{
 
   .navbar-custom .navbar-brand img,
   #profile-pic {
+    width: 48px;
+    height: 48px;
     margin-left: 0;
     margin-right: 10px;
   }
@@ -12393,6 +12399,13 @@ html,body{
 }
 
 @media (max-width: 768px) {
+  #the-hovering {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
   .navbar-custom .navbar-nav {
     gap: 0.75rem;
   }
