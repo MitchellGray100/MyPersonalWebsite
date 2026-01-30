@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600&display=swap");
 
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
@@ -11721,7 +11722,7 @@ textarea.form-control-lg {
   margin-bottom: 3rem;
   padding-left: 0px;
   padding-right: 0px;
-  color: #931F1F;
+  color: var(--brand-red);
 }
 
 #main-section {
@@ -11966,7 +11967,7 @@ html,body{
 }
 
 .navbar-custom .nav-link {
-  font-size: 2.0rem;
+  font-size: clamp(1.2rem, 1.6vw, 2rem);
   font-weight: 500;
   margin-right: 30px;
 }
@@ -12045,9 +12046,9 @@ html,body{
   margin-left: 0;
   text-align: center;
   color: white;
-  border: 7px solid #931F1F;
+  border: 7px solid var(--brand-red);
   border-radius: 100%;
-  background-color: #000000;
+  background-color: var(--brand-black);
 }
 .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
   font-size: 10px;
@@ -12193,7 +12194,7 @@ html,body{
 }
 
 .navbar-custom .navbar-nav {
-  gap: 5rem; /* space between items */
+  gap: clamp(1.5rem, 3vw, 4rem); /* space between items */
 }
 .navbar-custom .nav-link {
   margin-right: 0; /* remove old spacing */
@@ -12250,4 +12251,140 @@ html,body{
   #underscore {
     margin-right: 0;
   }
+}
+
+/* Theme polish */
+:root {
+  --brand-red: #b21e1e;
+  --brand-red-soft: #d33a3a;
+  --brand-black: #0b0b0d;
+  --brand-gray-950: #0f0f12;
+  --brand-gray-900: #17171b;
+  --brand-gray-850: #1e1e24;
+  --brand-gray-800: #25252d;
+  --brand-gray-700: #34343c;
+  --brand-gray-600: #52525c;
+  --brand-gray-300: #c8c8d1;
+  --brand-white: #f7f7f8;
+  --brand-border: rgba(247, 247, 248, 0.08);
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(178, 30, 30, 0.18), transparent 60%),
+    radial-gradient(1000px 800px at 110% 10%, rgba(178, 30, 30, 0.12), transparent 65%),
+    var(--brand-black);
+  color: var(--brand-white);
+  font-family: "Space Grotesk", "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Bebas Neue", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+a {
+  color: var(--brand-red);
+}
+a:hover {
+  color: var(--brand-red-soft);
+}
+
+.highlight {
+  color: var(--brand-red);
+}
+
+.navbar-custom {
+  background: linear-gradient(90deg, var(--brand-black) 0%, #2a0f10 35%, var(--brand-red) 70%, var(--brand-black) 100%);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(178, 30, 30, 0.35);
+}
+.navbar-custom .nav-link {
+  color: var(--brand-white);
+  opacity: 0.9;
+  white-space: nowrap;
+}
+.navbar-custom .nav-link:hover {
+  color: var(--brand-red-soft);
+  opacity: 1;
+}
+
+#main-section {
+  background: linear-gradient(180deg, var(--brand-black) 0%, var(--brand-gray-900) 100%);
+}
+
+.album {
+  background-color: var(--brand-gray-900) !important;
+}
+
+.bg-dark {
+  background-color: var(--brand-gray-900) !important;
+}
+.bg-light {
+  background-color: var(--brand-gray-850) !important;
+  color: var(--brand-white);
+}
+
+.text-dark {
+  color: var(--brand-gray-300) !important;
+}
+.text-muted {
+  color: var(--brand-gray-300) !important;
+}
+
+.card {
+  background-color: var(--brand-gray-900);
+  border: 1px solid rgba(178, 30, 30, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+.card .card-body {
+  color: var(--brand-white);
+}
+.card .text-secondary {
+  color: var(--brand-gray-300) !important;
+}
+
+.btn-primary {
+  background-color: var(--brand-red);
+  border-color: var(--brand-red);
+  color: var(--brand-white);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--brand-red-soft);
+  border-color: var(--brand-red-soft);
+  box-shadow: 0 8px 20px rgba(178, 30, 30, 0.35);
+}
+
+.btn-dark {
+  background-color: var(--brand-black);
+  border-color: var(--brand-gray-700);
+  color: var(--brand-white);
+}
+.btn-dark:hover,
+.btn-dark:focus {
+  background-color: var(--brand-gray-800);
+  border-color: var(--brand-gray-600);
+}
+
+.btn-outline-secondary {
+  color: var(--brand-gray-300);
+  border-color: var(--brand-gray-600);
+}
+
+.top-buttons .highlight {
+  color: var(--brand-white);
+}
+.btn-outline-secondary:hover {
+  background-color: var(--brand-gray-700);
+  border-color: var(--brand-gray-300);
+  color: var(--brand-white);
+}
+
+.timeline:before {
+  background-color: var(--brand-gray-700);
+}
+
+.team-member img {
+  border: 0.5rem solid var(--brand-gray-600);
 }

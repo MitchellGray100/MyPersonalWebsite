@@ -43,8 +43,8 @@
 
     .contact-link {
       text-decoration: none;
-      color: #ffffff;
-      background-color: #931F1F;
+      color: var(--brand-white);
+      background-color: var(--brand-red);
       padding: 10px;
       border-radius: 5px;
       width: 100%;
@@ -53,7 +53,7 @@
     }
 
     .contact-link:hover {
-      background-color: #7a1a1a;
+      background-color: var(--brand-red-soft);
     }
 
     @media (max-width: 768px) {
@@ -80,12 +80,12 @@
   </style>
 </head>
 
-<body style="background-color:black;">
+<body style="background-color: var(--brand-black);">
 
   <header>
-    <div style="background-color: #931F1F;">
+    <div style="background-color: var(--brand-red);">
       <!-- Bootstrap Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" style="background-color: #931F1F;">
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" style="background-color: var(--brand-red);">
         <div class="container">
           <div class="navbar-brand d-flex align-items-center highlight">
             <img id="profile-pic" src="images/PFP.jpg" alt="Mitchell Gray">
@@ -117,7 +117,7 @@
   </header>
 
 <main>
-  <div class="container contact-container" style="color: white;">
+  <div class="container contact-container" style="color: var(--brand-white);">
     <h2>Contact & Connect with Me</h2>
     <ul class="contact-links">
       <li><a class="contact-link" href="https://github.com/MitchellGray100" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
@@ -129,14 +129,16 @@
 
 </body>
 
-<footer style="background-color:#000000;" class="text-dark py-5">
+<footer style="background-color:var(--brand-black);" class="text-dark py-5">
   <div class="container">
     <p class="float-end mb-1">
-      <a style="color: #931F1F;" class="highlight" href="#">Back to top</a>
+      <a style="color: var(--brand-red);" class="highlight" href="#">Back to top</a>
     </p>
-    <p style="color: #931F1F;" class="mb-1">Mitchell Gray ©2025</p>
-    <p style="color: #931F1F;" class="mb-0">mgray88@gatech.edu</p>
-    <p style="color: #931F1F;" class="mb-0">meg346@cornell.edu</p>
+    <p style="color: var(--brand-red);" class="mb-1">Mitchell Gray ©2025</p>
+    <p style="color: var(--brand-red);" class="mb-0">mgray88@gatech.edu</p>
+    <p style="color: var(--brand-red);" class="mb-0">meg346@cornell.edu</p>
   </div>
 </footer>
 </html>
+
+

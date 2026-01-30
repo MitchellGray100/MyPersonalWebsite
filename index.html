@@ -46,12 +46,12 @@
 
 </head>
 
-<body style="background-color:black;">
+<body style="background-color: var(--brand-black);">
 
   <header>
-  <div style="background-color: #931F1F;">
+  <div style="background-color: var(--brand-red);">
     <!-- Bootstrap Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" style="background-color: #931F1F;">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" style="background-color: var(--brand-red);">
       <div class="container">
         <div class="navbar-brand d-flex align-items-center highlight">
           <!-- SVG element removed for simplicity -->
@@ -86,7 +86,7 @@
 
   <main>
 
-    <section id="main-section" style="background-color: #000000;" class="py-5 text-center container-fluid" width=100%>
+    <section id="main-section" style="background-color: var(--brand-black);" class="py-5 text-center container-fluid" width=100%>
       <div id="sub-main-section">
 
       <div id="the-hovering" class="row py-lg-5">
@@ -112,7 +112,7 @@
       <div class="container">
         <div style="margin-bottom: 3%;" class="row row-cols-12 row-cols-sm-12 row-cols-md-12 row-cols-lg-12 g-3">
           <div class="col d-flex align-items-stretch">
-            <div style="border-color: #931F1F" class="card shadow-sm">
+            <div style="border-color: var(--brand-red)" class="card shadow-sm">
               <div class="gif-row" id="gifs-rows-nosi" width=10px>
                 <a class="image-links" href="https://github.com/MitchellGray100/Nosi">
                 <img id="preset-file-nosi" src="images/Nosi/NosiImage.png" alt="">
@@ -120,7 +120,7 @@
               </a>
               </div>
               <div class="card-body d-flex flex-column bg-dark ">
-                <p style="color: white;" class="card-text">Nosi IDE is a fork of vscode being rolled out to CS 6601 at Georgia Tech.
+                <p style="color: var(--brand-white);" class="card-text">Nosi IDE is a fork of vscode being rolled out to CS 6601 at Georgia Tech.
                   Nosi allows staff to enforce a specific IDE environment for all students and keep track of student *IDE metadata* while they work on their assignment.
                   Anti-plagiarism/anti-cheating scripts and models are used to analyze the metadata to flag suspicious behavior. The IDE also contains an AI assistant
                   that can provide helpful nudges when students struggle with their assignment or provide help understanding course content.
@@ -137,7 +137,7 @@
         </div>
         <div style="margin-bottom: 3%;" class="row row-cols-12 row-cols-sm-12 row-cols-md-12 row-cols-lg-12 g-3">
           <div class="col d-flex align-items-stretch">
-            <div style="border-color: #931F1F" class="card shadow-sm">
+            <div style="border-color: var(--brand-red)" class="card shadow-sm">
               <div class="gif-row" id="gifs-rows-Speed" width=10px>
                 <a class="image-links" href="https://github.com/MitchellGray100/SPEED">
                 <img id="preset-file-Speed" src="images/Speed/Speed.png" alt="">
@@ -145,7 +145,7 @@
               </a>
               </div>
               <div class="card-body d-flex flex-column bg-dark ">
-                <p style="color: white;" class="card-text">1 of 44 projects selected to present at BOOM 2024. My team and I created a Scalable Platform for Efficient Execution of Distributed testing. The fault-tolerant system
+                <p style="color: var(--brand-white);" class="card-text">1 of 44 projects selected to present at BOOM 2024. My team and I created a Scalable Platform for Efficient Execution of Distributed testing. The fault-tolerant system
                   contains a controller node that orchestrates worker nodes that run JUnit tests on Java code. The worker nodes report
                   their findings to the controller. Once all tests are ran, test results are shown in the frontend to the user
                 </p>
@@ -162,7 +162,7 @@
 
         <div style="margin-bottom: 3%;" class="row row-cols-12 row-cols-sm-12 row-cols-md-12 row-cols-lg-12 g-3">
           <div class="col d-flex align-items-stretch">
-            <div style="border-color: #931F1F" class="card shadow-sm">
+            <div style="border-color: var(--brand-red)" class="card shadow-sm">
               <div class="gif-row" id="gifs-rows-MeetUp" width=10px>
                 <a class="image-links" href="https://github.com/MitchellGray100/CornellMeetUp">
                 <img id="preset-file-MeetUp" src="images/CornellMeetUp/Login.PNG" alt="">
@@ -170,7 +170,7 @@
               </a>
               </div>
               <div class="card-body d-flex flex-column bg-dark ">
-                <p style="color: white;" class="card-text">1 of 32 projects selected to present at BOOM 2023. For CS 5412, my partner and I created
+                <p style="color: var(--brand-white);" class="card-text">1 of 32 projects selected to present at BOOM 2023. For CS 5412, my partner and I created
                   a social media website that allows
                   users to create groups, chat with friends using Kafka, and see where their friends are. Data is stored in
                   CosmoDB and the backend runs on Azure microservices made in Python. The frontend runs on HTML,
@@ -197,7 +197,7 @@
               </a>
               </div>
               <div class="card-body d-flex flex-column bg-dark ">
-                <p style="color: white;" class="card-text">Paper accepted into VLDB 2023. ADOPT is a query engine that combines adaptive query processing with worst-case optimal join algorithms. See technical report <a href="https://github.com/jxiw/ADOPT/blob/main/report/ADOPT.pdf">here</a>.
+                <p style="color: var(--brand-white);" class="card-text">Paper accepted into VLDB 2023. ADOPT is a query engine that combines adaptive query processing with worst-case optimal join algorithms. See technical report <a href="https://github.com/jxiw/ADOPT/blob/main/report/ADOPT.pdf">here</a>.
                 </p>
                 <div class="d-flex justify-content-between align-items-center mt-auto">
                   <div class="btn-group mt-auto">
@@ -217,7 +217,7 @@
               </a>
               </div>
               <div class="card-body d-flex flex-column bg-dark ">
-                <p style="color: white;" class="card-text">We re-implemented and upgraded state-of-the-art point cloud classification Deep Neural Networks. We started by implementing PointNet and PointPillars. Then we upgraded them by modifying their architecture, adding Dropout, implementing Data augmentation, and introducing Residual Connections. Improved validation accuracy by 4% and massively reduced overfitting.
+                <p style="color: var(--brand-white);" class="card-text">We re-implemented and upgraded state-of-the-art point cloud classification Deep Neural Networks. We started by implementing PointNet and PointPillars. Then we upgraded them by modifying their architecture, adding Dropout, implementing Data augmentation, and introducing Residual Connections. Improved validation accuracy by 4% and massively reduced overfitting.
                 Paper viewable in repository.</p>
                 <div class="d-flex justify-content-between align-items-center mt-auto">
                   <div class="btn-group mt-auto">
@@ -237,7 +237,7 @@
               </a>
               </div>
               <div class="card-body d-flex flex-column bg-dark ">
-                <p style="color: white;" class="card-text">Our team parallelized sparse-matrix multiplication operations using GPUs, massively improving performance of the algorithms.
+                <p style="color: var(--brand-white);" class="card-text">Our team parallelized sparse-matrix multiplication operations using GPUs, massively improving performance of the algorithms.
                   This research used resources of the National Energy Research Scientific Computing Center, a Department of Energy Office of Science National User Facility using NERSC award NERSC DDR-ERCAP0027296.
                   Paper viewable in repository.
                 </p>
@@ -259,7 +259,7 @@
               </a>
               </div>
               <div class="card-body d-flex flex-column bg-dark ">
-                <p style="color: white;" class="card-text">Our team utilized Machine Learning to model flight delay cascades in flight networks.
+                <p style="color: var(--brand-white);" class="card-text">Our team utilized Machine Learning to model flight delay cascades in flight networks.
                   Paper viewable in repository.
                 </p>
                 <div class="d-flex justify-content-between align-items-center mt-auto">
@@ -280,7 +280,7 @@
               </a>
               </div>
               <div class="card-body d-flex flex-column bg-dark ">
-                <p style="color: white;" class="card-text">Using the DS-Lab framework, my partner and I were able to create a sharded transactional key-value store that uses
+                <p style="color: var(--brand-white);" class="card-text">Using the DS-Lab framework, my partner and I were able to create a sharded transactional key-value store that uses
                     Paxos for replication and 2PC for multi-key updates. We implemented an Exactly-once RPC protocol on top of an
                     asynchronous network, a primary-backup protocol, Paxos implemented with the PMMC protocol, and 2PC.
                 </p>
@@ -302,7 +302,7 @@
               </a>
               </div>
               <div class="card-body d-flex flex-column bg-dark ">
-                <p style="color: white;" class="card-text">Our team created a Data Base Management System in Java. Queries are transformed into Logical Query Plans and then turned into Physical Query Plans.
+                <p style="color: var(--brand-white);" class="card-text">Our team created a Data Base Management System in Java. Queries are transformed into Logical Query Plans and then turned into Physical Query Plans.
                   Our Interpreter implemented B+ tree indexes that could be stored/loaded via serialization/deserialization.
                 </p>
                 <div class="d-flex justify-content-between align-items-center mt-auto">
@@ -326,7 +326,7 @@
 
 
               <div class="card-body d-flex flex-column bg-dark">
-                <p style="color: white;" class="card-text">My team upgraded an operating system in C. We
+                <p style="color: var(--brand-white);" class="card-text">My team upgraded an operating system in C. We
                 made a threading and semaphore package, multi level feedback queue to schedule processes,
                  a file write-through and write-back cache using the Clock eviction algorithm,
                   and we also implemented the FAT file system. These upgrades increased the speed of the OS by 30%.
@@ -349,7 +349,7 @@
               </a>
               </div>
               <div class="card-body d-flex flex-column bg-dark ">
-                <p style="color: white;" class="card-text">A representation of Chess made in Java. The game allows for two
+                <p style="color: var(--brand-white);" class="card-text">A representation of Chess made in Java. The game allows for two
                   players or one player. One player mode has an AI that uses a minimax algorithm. The score is
                   automatically updated for each player. The project is displayed using JavaFX.
                 </p>
@@ -373,7 +373,7 @@
               </svg>
 
               <div class="card-body d-flex flex-column bg-dark">
-                <p style="color: white;" class="card-text">Tank game made in Java using JavaFX. The game can be one
+                <p style="color: var(--brand-white);" class="card-text">Tank game made in Java using JavaFX. The game can be one
                   player or two players. The map is a 10x10 square with randomly generated walls and
                   equidistant powerup location. Using Dijkstra's algorithm, an AI is able to play in one player
                   mode. A tank must hit its enemy tank with a bullet to win
@@ -398,7 +398,7 @@
               </div>
 
               <div class="card-body d-flex flex-column bg-dark">
-                <p style="color: white;" class="card-text">A Ford Fulkerson calculator made using Java,
+                <p style="color: var(--brand-white);" class="card-text">A Ford Fulkerson calculator made using Java,
                   JavaFX, and CSS. The project makes it extremely easy to create graphs of nodes and edges.
                   The max flow of the graph can then be calculated.
                 </p>
@@ -421,7 +421,7 @@
               </a>
               </div>
               <div class="card-body d-flex flex-column bg-dark">
-                <p style="color: white;" class="card-text">JavaFX Graph Traversal Visualizer.
+                <p style="color: var(--brand-white);" class="card-text">JavaFX Graph Traversal Visualizer.
                   Visual graph that can be interacted with. Allows the creation of graphs/mazes that are then traversed from a starting to ending square.</p>
                 <div class="d-flex justify-content-between align-items-center mt-auto">
                   <div class="btn-group mt-auto">
@@ -444,7 +444,7 @@
 
 
               <div class="card-body d-flex flex-column bg-dark">
-                <p style="color: white;" class="card-text">A Connect4 representation made in Java with JavaFX. The
+                <p style="color: var(--brand-white);" class="card-text">A Connect4 representation made in Java with JavaFX. The
                   game can be one player or two players. The player plays against an AI in one player mode that
                   uses a point system to choose the best move.</p>
                 <div class="d-flex justify-content-between align-items-center mt-auto">
@@ -467,7 +467,7 @@
 
 
               <div class="card-body d-flex flex-column bg-dark">
-                <p style="color: white;" class="card-text">We created a simulator of a world full of
+                <p style="color: var(--brand-white);" class="card-text">We created a simulator of a world full of
                   critters. Critters had their own programmable language called Critter Lang. The project
                   displayed in a GUI using JavaFX which let the user step through the world’s time</p>
                 <div class="d-flex justify-content-between align-items-center mt-auto">
@@ -491,7 +491,7 @@
 
 
               <div class="card-body d-flex flex-column bg-dark">
-                <p style="color: white;" class="card-text">A JavaFX GUI that allows users to calculate the r-squared value and line of
+                <p style="color: var(--brand-white);" class="card-text">A JavaFX GUI that allows users to calculate the r-squared value and line of
                 best fit for the inputted data. It also plots the data points and line on a graph. Data can be manually added or imported through a .csv file. </p>
                 <div class="d-flex justify-content-between align-items-center mt-auto">
                   <div class="btn-group mt-auto">
@@ -515,7 +515,7 @@
 
 
               <div class="card-body d-flex flex-column bg-dark">
-                <p style="color: white;" class="card-text">A terminal Based version of Uno and custom game Uno-Solitaire written in OCaml. Can play locally
+                <p style="color: var(--brand-white);" class="card-text">A terminal Based version of Uno and custom game Uno-Solitaire written in OCaml. Can play locally
                 against friends or against multiple levels of AIs. The state of any game can be loaded and saved.</p>
                 <div class="d-flex justify-content-between align-items-center mt-auto">
                   <div class="btn-group mt-auto">
@@ -536,14 +536,14 @@
 
   </main>
 
-<footer style="background-color:#000000;" class="text-dark py-5">
+<footer style="background-color:var(--brand-black);" class="text-dark py-5">
   <div class="container">
     <p class="float-end mb-1">
-      <a style="color: #931F1F;" class="highlight" href="#">Back to top</a>
+      <a style="color: var(--brand-red);" class="highlight" href="#">Back to top</a>
     </p>
-    <p style="color: #931F1F;" class="mb-1">Mitchell Gray ©2025</p>
-    <p style="color: #931F1F;" class="mb-0">mgray88@gatech.edu</p>
-    <p style="color: #931F1F;" class="mb-0">meg346@cornell.edu</p>
+    <p style="color: var(--brand-red);" class="mb-1">Mitchell Gray ©2025</p>
+    <p style="color: var(--brand-red);" class="mb-0">mgray88@gatech.edu</p>
+    <p style="color: var(--brand-red);" class="mb-0">meg346@cornell.edu</p>
   </div>
 </footer>
 
@@ -553,3 +553,5 @@
 </body>
 
 </html>
+
+

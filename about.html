@@ -47,12 +47,12 @@
 
 </head>
 
-<body style="background-color:black;">
+<body style="background-color: var(--brand-black);">
 
   <header>
-  <div style="background-color: #931F1F;">
+  <div style="background-color: var(--brand-red);">
     <!-- Bootstrap Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" style="background-color: #931F1F;">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" style="background-color: var(--brand-red);">
       <div class="container">
         <div class="navbar-brand d-flex align-items-center highlight">
           <img id="profile-pic" src="images/PFP.jpg" alt="Mitchell Gray">
@@ -93,35 +93,35 @@
 </head>
 <style>
   .cs {
-    color: #931F1F;
+    color: var(--brand-red);
   }
   .noncs {
-    color: lightgray;
+    color: var(--brand-gray-300);
   }
   .orie {
-    color: purple;
+    color: var(--brand-gray-600);
   }
   .gtcs {
-    color: rgb(179, 163, 105);
+    color: var(--brand-red-soft);
   }
   .tr th {
-    color: white;
+    color: var(--brand-white);
   }
   h1, h2, h3, h4, p, li {
-    color: White;
+    color: var(--brand-white);
   }
   .table {
     table-layout: fixed;
   }
   .table-header {
-    color: white;
+    color: var(--brand-white);
   }
 
 </style>
 
 <body>
   
-  <div class="container mt-5" style="color:white; margin-top: 0px !important;">
+  <div class="container mt-5" style="color: var(--brand-white); margin-top: 0px !important;">
     <hr>
     <br>
     <h2 style="text-align: center" class="section-heading text-uppercase">About Me</h2>
@@ -137,13 +137,13 @@
         <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/mitchellegray/" aria-label="My LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
-    <p style="text-align: center;">I'm currently an MTS on Oracle's <a href="https://www.oracle.com/database/distributed-database/" style="color:#931F1F;">Globally Distributed Database team</a> working on Shard 
-      <a href="https://blogs.oracle.com/database/post/raft-replication-in-distributed-23c" style="color:#931F1F;">Raft Replication</a>.</p><br>
+    <p style="text-align: center;">I'm currently an MTS on Oracle's <a href="https://www.oracle.com/database/distributed-database/" style="color:var(--brand-red);">Globally Distributed Database team</a> working on Shard 
+      <a href="https://blogs.oracle.com/database/post/raft-replication-in-distributed-23c" style="color:var(--brand-red);">Raft Replication</a>.</p><br>
 
       
-    <p style="text-align: center";>While working at Oracle, I am completing my Master of Science at <a href="https://www.cc.gatech.edu/" style="color:#931F1F;">Georgia Tech</a> (specializing in Artificial Intelligence). <br>
+    <p style="text-align: center";>While working at Oracle, I am completing my Master of Science at <a href="https://www.cc.gatech.edu/" style="color:var(--brand-red);">Georgia Tech</a> (specializing in Artificial Intelligence). <br>
       On top of this, I work as a Teaching Assistant for Artificial Intelligence (CS 6601) and a Graduate Researcher in the Contextual Computing Group at Georgia Tech. <br>
-      I'm an alum of <a href="https://www.cornell.edu" style="color:#931F1F;">Cornell University</a>, where I graduated in May 2024 with the equivalence of an MEng (30 graduate credits and a Master's Project),<br> 
+      I'm an alum of <a href="https://www.cornell.edu" style="color:var(--brand-red);">Cornell University</a>, where I graduated in May 2024 with the equivalence of an MEng (30 graduate credits and a Master's Project),<br> 
       a B.S. in Computer Science, and a minor in Operations Research Information Engineering.</p><br>
 
     <p style="text-align: center";>My main interests are in Distributed Systems, AI Infrastructure, Databases, Cloud, Machine Learning, and Deep Learning.</p>
@@ -151,7 +151,7 @@
     <hr>
     <br>
     <section class="page-section bg-light" id="references">
-      <div style="background-color: #000000;" class="container">
+      <div style="background-color: var(--brand-black);" class="container">
         <div class="text-center">
           <h2 class="section-heading text-uppercase">My Life</h2>
           <h3 class="section-subheading text-muted">Learn about my journey</h3>
@@ -680,14 +680,16 @@
 
 <script src="index.js" charset="utf-8"></script>
 </body>
-<footer style="background-color:#000000;" class="text-dark py-5">
+<footer style="background-color:var(--brand-black);" class="text-dark py-5">
   <div class="container">
     <p class="float-end mb-1">
-      <a style="color: #931F1F;" class="highlight" href="#">Back to top</a>
+      <a style="color: var(--brand-red);" class="highlight" href="#">Back to top</a>
     </p>
-    <p style="color: #931F1F;" class="mb-1">Mitchell Gray ©2025</p>
-    <p style="color: #931F1F;" class="mb-0">mgray88@gatech.edu</p>
-    <p style="color: #931F1F;" class="mb-0">meg346@cornell.edu</p>
+    <p style="color: var(--brand-red);" class="mb-1">Mitchell Gray ©2025</p>
+    <p style="color: var(--brand-red);" class="mb-0">mgray88@gatech.edu</p>
+    <p style="color: var(--brand-red);" class="mb-0">meg346@cornell.edu</p>
   </div>
 </footer>
 </html>
+
+
