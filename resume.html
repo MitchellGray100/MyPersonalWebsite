@@ -4,20 +4,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
+  <meta name="description" content="Mitchell Gray resume">
   <meta name="author" content="Mitchell Gray">
   <title>Resume - Mitchell Gray's Personal Website</title>
   <script src="https://kit.fontawesome.com/6c0fb6ee19.js" crossorigin="anonymous"></script>
-
   <link rel="stylesheet" href="styles.css">
-
 
   <!-- Bootstrap core CSS -->
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
   <!-- Favicons -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="apple-touch-icon" sizes="180x180" href="images/Favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/Favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/Favicon/favicon-16x16.png">
@@ -25,87 +23,84 @@
   <link rel="mask-icon" href="images/Favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-
-
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
-
-
 </head>
 
 <body style="background-color: var(--brand-black);">
-
   <header>
-  <div style="background-color: var(--brand-red);">
-    <!-- Bootstrap Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" style="background-color: var(--brand-red);">
-      <div class="container">
-        <div class="navbar-brand d-flex align-items-center highlight">
-          <!-- SVG element removed for simplicity -->
-          <img id="profile-pic" src="images/PFP.jpg" alt="Mitchell Gray">
-          <strong id="name">Mitchell Gray</strong>
-          <strong id="underscore">_</strong>
+    <div style="background-color: var(--brand-red);">
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" style="background-color: var(--brand-red);">
+        <div class="container">
+          <div class="navbar-brand d-flex align-items-center highlight">
+            <img id="profile-pic" src="images/PFP.jpg" alt="Mitchell Gray">
+            <strong id="name">Mitchell Gray</strong>
+            <strong id="underscore">_</strong>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="https://mitchellegray.com/index.html">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://mitchellegray.com/about.html">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://mitchellegray.com/resume.html">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://mitchellegray.com/contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="https://mitchellegray.com/index.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://mitchellegray.com/about.html">About Me</a>
-            </li></li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://mitchellegray.com/resume.html">Resume</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://mitchellegray.com/contact.html">Contact</a>
-            </li>
-          </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="resume-main">
+    <section class="resume-hero">
+      <div class="container resume-hero-inner">
+        <div class="resume-hero-text">
+          <p class="resume-eyebrow">Resume</p>
+          <h1 class="resume-title">Mitchell Gray</h1>
+          <p class="resume-lead">View the PDF below or download a copy for offline use.</p>
+          <div class="resume-actions">
+            <a class="btn btn-primary" href="Mitchell_Gray_Resume.pdf" target="_blank" rel="noopener">Open PDF</a>
+            <a class="btn btn-outline-secondary" href="Mitchell_Gray_Resume.pdf" download>Download</a>
+          </div>
+        </div>
+        <div class="resume-highlight">
+          <div class="resume-highlight-card">
+            <p class="resume-highlight-title">Quick access</p>
+            <p class="resume-highlight-body">If the embedded viewer does not load, use the buttons to open the PDF in a new tab or download it directly.</p>
+          </div>
         </div>
       </div>
-    </nav>
-  </div>
-</header>
+    </section>
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+    <section class="resume-viewer">
+      <div class="container">
+        <div class="resume-card">
+          <object class="resume-frame" data="Mitchell_Gray_Resume.pdf#view=Fit" type="application/pdf">
+            <p class="resume-fallback">Your browser could not display the PDF. <a href="Mitchell_Gray_Resume.pdf" target="_blank" rel="noopener">Open it in a new tab</a> or <a href="Mitchell_Gray_Resume.pdf" download>download it here</a>.</p>
+          </object>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<head>
-  <meta charset="utf-8">
-  <title>Mitchell Gray's Personal Website</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <embed src="Mitchell_Gray_Resume.pdf" type="application/pdf" width="100%" height="1200px">
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-meta">
+        <p class="footer-name">Mitchell Gray &copy; 2026</p>
+        <p class="footer-contact">mgray88@gatech.edu</p>
+        <p class="footer-contact">meg346@cornell.edu</p>
+      </div>
+      <a class="footer-top" href="#">Back to top</a>
+    </div>
+  </footer>
 </body>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-meta">
-      <p class="footer-name">Mitchell Gray &copy; 2025</p>
-      <p class="footer-contact">mgray88@gatech.edu</p>
-      <p class="footer-contact">meg346@cornell.edu</p>
-    </div>
-    <a class="footer-top" href="#">Back to top</a>
-  </div>
-</footer>
-
-
-
-
+</html>

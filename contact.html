@@ -21,63 +21,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script src="https://kit.fontawesome.com/6c0fb6ee19.js" crossorigin="anonymous"></script>
-  <style>
-    .contact-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .contact-links {
-      list-style: none;
-      padding: 0;
-      width: 100%;
-      max-width: 300px;
-    }
-
-    .contact-links li {
-      margin: 10px 0;
-      display: flex;
-    }
-
-    .contact-link {
-      text-decoration: none;
-      color: var(--brand-white);
-      background-color: var(--brand-red);
-      padding: 10px;
-      border-radius: 5px;
-      width: 100%;
-      text-align: center;
-      transition: background-color 0.3s ease;
-    }
-
-    .contact-link:hover {
-      background-color: var(--brand-red-soft);
-    }
-
-    @media (max-width: 768px) {
-      .contact-links {
-        max-width: 100%;
-      }
-    }
-
-    main {
-      flex: 1;
-    }
-
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh; 
-    }
-
-  </style>
 </head>
 
 <body style="background-color: var(--brand-black);">
@@ -102,7 +45,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="https://mitchellegray.com/about.html">About Me</a>
-              </li></li>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="https://mitchellegray.com/resume.html">Resume</a>
               </li>
@@ -116,15 +59,51 @@
     </div>
   </header>
 
-<main>
-  <div class="container contact-container" style="color: var(--brand-white);">
-    <h2>Contact & Connect with Me</h2>
-    <ul class="contact-links">
-      <li><a class="contact-link" href="https://github.com/MitchellGray100" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-      <li><a class="contact-link" href="https://www.linkedin.com/in/mitchellegray/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-      <li><a class="contact-link" href="mailto:meg346@cornell.edu"><i class="fa fa-envelope"></i> Email Me</a></li>
-    </ul>
-  </div>
+<main class="contact-main">
+  <section class="contact-hero">
+    <div class="container contact-hero-inner">
+      <div class="contact-hero-text">
+        <p class="contact-eyebrow">Contact</p>
+        <h1 class="contact-title">Let’s connect</h1>
+        <p class="contact-lead">Reach me through the channels below. I’m always happy to talk about new projects, collaboration, or opportunities.</p>
+      </div>
+      <div class="contact-hero-card">
+        <p class="contact-hero-card-title">Quick reply</p>
+        <p class="contact-hero-card-body">Email is the fastest way to reach me. Expect a response within 24–48 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-grid-section">
+    <div class="container contact-grid">
+      <article class="contact-card">
+        <div class="contact-card-icon">
+          <i class="fab fa-github"></i>
+        </div>
+        <h2 class="contact-card-title">GitHub</h2>
+        <p class="contact-card-body">Explore my latest repositories, experiments, and open-source work.</p>
+        <a class="btn btn-outline-secondary contact-card-action" href="https://github.com/MitchellGray100" target="_blank" rel="noopener">Visit GitHub</a>
+      </article>
+
+      <article class="contact-card">
+        <div class="contact-card-icon">
+          <i class="fab fa-linkedin"></i>
+        </div>
+        <h2 class="contact-card-title">LinkedIn</h2>
+        <p class="contact-card-body">See my professional updates, skills, and recommendations.</p>
+        <a class="btn btn-outline-secondary contact-card-action" href="https://www.linkedin.com/in/mitchellegray/" target="_blank" rel="noopener">View LinkedIn</a>
+      </article>
+
+      <article class="contact-card contact-card-accent">
+        <div class="contact-card-icon">
+          <i class="fa fa-envelope"></i>
+        </div>
+        <h2 class="contact-card-title">Email</h2>
+        <p class="contact-card-body">Send a quick note with details or questions, and I’ll follow up soon.</p>
+        <a class="btn btn-primary contact-card-action" href="mailto:meg346@cornell.edu">Email Me</a>
+      </article>
+    </div>
+  </section>
 </main>
 
 </body>
@@ -132,7 +111,7 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-meta">
-      <p class="footer-name">Mitchell Gray &copy; 2025</p>
+      <p class="footer-name">Mitchell Gray &copy; 2026</p>
       <p class="footer-contact">mgray88@gatech.edu</p>
       <p class="footer-contact">meg346@cornell.edu</p>
     </div>
