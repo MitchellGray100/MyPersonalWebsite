@@ -12198,3 +12198,15 @@ html,body{
 .navbar-custom .nav-link {
   margin-right: 0; /* remove old spacing */
 }
+
+@media (max-width: 768px) {
+  .navbar-custom .navbar-nav {
+    gap: 0.75rem;
+  }
+  .navbar-custom .nav-item:first-child {
+    margin-left: 0;
+  }
+  #underscore {
+    margin-right: 12px;
+  }
+}
