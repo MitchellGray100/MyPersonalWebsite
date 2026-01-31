@@ -157,6 +157,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const topThreshold = 5;
   let topSnapTriggered = false;
   let lastSnapScrollY = window.scrollY;
+  let topSnapArmed = false;
   if (timelineItems.length) {
     timelineItems.forEach((item, index) => {
       item.style.setProperty('--timeline-delay', `${Math.min(index * 0.06, 0.3)}s`);
@@ -221,6 +222,15 @@ document.addEventListener("DOMContentLoaded", function() {
       }, Math.max(heroReadyAt - Date.now(), 0));
     }
   }, { passive: true });
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      if (!autoScrollTriggered && autoScrollPending) {
+        handleTopScroll();
+        autoScrollPending = false;
+      }
+    }, 820);
+  });
   window.addEventListener('load', () => {
     if (window.scrollY > topThreshold) {
       autoScrollTriggered = true;
@@ -251,7 +261,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const coveredFraction = Math.max(0, firstCardRect.top) / firstCardRect.height;
     const shouldSnapUp = isScrollingUp && coveredFraction >= coverThreshold;
 
-    if (shouldSnapUp && !topSnapTriggered) {
+    if (firstCardRect.top < window.innerHeight * 0.15) {
+      topSnapArmed = true;
+    }
+
+    if (shouldSnapUp && topSnapArmed && !topSnapTriggered) {
       topSnapTriggered = true;
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
@@ -259,6 +273,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (firstCardRect.top < window.innerHeight * 0.3) {
       topSnapTriggered = false;
+    }
+    if (currentScrollY <= topThreshold) {
+      topSnapArmed = false;
     }
   }
 
