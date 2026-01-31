@@ -1,94 +1,91 @@
-$("img", "#gifs-rows-flightcascade").hover(function() {
-  $('#preset-file-flightcascade').toggle();
-  $('#gif-file-flightcascade').toggle();
-  $('#gif-file-flightcascade').attr("src", "images/FlightCascade/image2.png");
-});
-$("img", "#gifs-rows-sparsematrix").hover(function() {
-  $('#preset-file-sparsematrix').toggle();
-  $('#gif-file-sparsematrix').toggle();
-  $('#gif-file-sparsematrix').attr("src", "images/SparseMatrix/image2.png");
-});
-$("img", "#gifs-rows-pointcloud").hover(function() {
-  $('#preset-file-pointcloud').toggle();
-  $('#gif-file-pointcloud').toggle();
-  $('#gif-file-pointcloud').attr("src", "images/PointCloud/image2.png");
-});
-$("img", "#gifs-rows-nosi").hover(function() {
-  $('#preset-file-nosi').toggle();
-  $('#gif-file-nosi').toggle();
-  $('#gif-file-nosi').attr("src", "images/Nosi/NosiImage2.gif");
-});
-$("img", "#gifs-rows-Speed").hover(function() {
-  $('#preset-file-Speed').toggle();
-  $('#gif-file-Speed').toggle();
-  $('#gif-file-Speed').attr("src", "images/Speed/ArchitectureDiagram.png");
-});
-$("img", "#gifs-rows-DBMS").hover(function() {
-  $('#preset-file-DBMS').toggle();
-  $('#gif-file-DBMS').toggle();
-  $('#gif-file-DBMS').attr("src", "images/DBMS/DBMS.PNG");
-});
-$("img", "#gifs-rows-dslabs").hover(function() {
-  $('#preset-file-dslabs').toggle();
-  $('#gif-file-dslabs').toggle();
-  $('#gif-file-dslabs').attr("src", "images/dslabs/dslabs-two.PNG");
-});
-$("img", "#gifs-rows-adopt").hover(function() {
-  $('#preset-file-adopt').toggle();
-  $('#gif-file-adopt').toggle();
-  $('#gif-file-adopt').attr("src", "images/Adopt/Tree.gif");
-});
-$("img", "#gifs-rows-MeetUp").hover(function() {
-  $('#preset-file-MeetUp').toggle();
-  $('#gif-file-MeetUp').toggle();
-  $('#gif-file-MeetUp').attr("src", "images/CornellMeetUp/Map1.PNG");
-});
-$("img", "#gifs-rows-Egos").hover(function() {
-  $('#preset-file-Egos').toggle();
-  $('#gif-file-Egos').toggle();
-  $('#gif-file-Egos').attr("src", "images/Egos/Bootup.gif");
-});
-$("img", "#gifs-rows-Uno").hover(function() {
-  $('#preset-file-Uno').toggle();
-  $('#gif-file-Uno').toggle();
-  $('#gif-file-Uno').attr("src", "images/Uno/photo2.PNG");
-});
-$("img", "#gifs-rows-LinearRegression").hover(function() {
-  $('#preset-file-LinearRegression').toggle();
-  $('#gif-file-LinearRegression').toggle();
-  $('#gif-file-LinearRegression').attr("src", "images/LinearRegression/gif4.gif");
-});
-$("img", "#gifs-rows-critterworld").hover(function() {
-  $('#preset-file-critterworld').toggle();
-  $('#gif-file-critterworld').toggle();
-  $('#gif-file-critterworld').attr("src", "images/CritterWorld/image7.png");
-});
-$("img", "#gifs-rows-connect4").hover(function() {
-  $('#preset-file-connect4').toggle();
-  $('#gif-file-connect4').toggle();
-  $('#gif-file-connect4').attr("src", "images/Connect4/SmallerGIF.gif");
-});
-$("img", "#gifs-rows-graph").hover(function() {
-  $('#preset-file-graph').toggle();
-  $('#gif-file-graph').toggle();
-  $('#gif-file-graph').attr("src", "images/GraphSearchVisualizer/GIF 3.gif");
-});
-$("img", "#gifs-rows-fulkerson").hover(function() {
-  $('#preset-file-fulkerson').toggle();
-  $('#gif-file-fulkerson').toggle();
-  $('#gif-file-fulkerson').attr("src", "images/FordFulkerson/AddNodesGIF.gif");
-});
-$("img", "#gifs-rows-tanks").hover(function() {
-  $('#preset-file-tanks').toggle();
-  $('#gif-file-tanks').toggle();
-  $('#gif-file-tanks').attr("src", "images/Tanks/AIGIF.gif");
+function setGifState(rowId, gifId, gifSrc, isActive) {
+  const row = document.getElementById(rowId);
+  const gif = document.getElementById(gifId);
+  if (!row || !gif) {
+    return;
+  }
+  if (isActive) {
+    row.classList.add('gif-active');
+    if (gifSrc) {
+      gif.setAttribute("src", gifSrc);
+    }
+  } else {
+    row.classList.remove('gif-active');
+  }
+}
 
-});
-$("img", "#gifs-rows-chess").hover(function() {
-  $('#preset-file-chess').toggle();
-  $('#gif-file-chess').toggle();
-  $('#gif-file-chess').attr("src", "images/Chess/ScalingGIF.gif");
-});
+$("img", "#gifs-rows-flightcascade").hover(
+  () => setGifState("gifs-rows-flightcascade", "gif-file-flightcascade", "images/FlightCascade/image2.png", true),
+  () => setGifState("gifs-rows-flightcascade", "gif-file-flightcascade", "", false)
+);
+$("img", "#gifs-rows-sparsematrix").hover(
+  () => setGifState("gifs-rows-sparsematrix", "gif-file-sparsematrix", "images/SparseMatrix/image2.png", true),
+  () => setGifState("gifs-rows-sparsematrix", "gif-file-sparsematrix", "", false)
+);
+$("img", "#gifs-rows-pointcloud").hover(
+  () => setGifState("gifs-rows-pointcloud", "gif-file-pointcloud", "images/PointCloud/image2.png", true),
+  () => setGifState("gifs-rows-pointcloud", "gif-file-pointcloud", "", false)
+);
+$("img", "#gifs-rows-nosi").hover(
+  () => setGifState("gifs-rows-nosi", "gif-file-nosi", "images/Nosi/NosiImage2.gif", true),
+  () => setGifState("gifs-rows-nosi", "gif-file-nosi", "", false)
+);
+$("img", "#gifs-rows-Speed").hover(
+  () => setGifState("gifs-rows-Speed", "gif-file-Speed", "images/Speed/ArchitectureDiagram.png", true),
+  () => setGifState("gifs-rows-Speed", "gif-file-Speed", "", false)
+);
+$("img", "#gifs-rows-DBMS").hover(
+  () => setGifState("gifs-rows-DBMS", "gif-file-DBMS", "images/DBMS/DBMS.PNG", true),
+  () => setGifState("gifs-rows-DBMS", "gif-file-DBMS", "", false)
+);
+$("img", "#gifs-rows-dslabs").hover(
+  () => setGifState("gifs-rows-dslabs", "gif-file-dslabs", "images/dslabs/dslabs-two.PNG", true),
+  () => setGifState("gifs-rows-dslabs", "gif-file-dslabs", "", false)
+);
+$("img", "#gifs-rows-adopt").hover(
+  () => setGifState("gifs-rows-adopt", "gif-file-adopt", "images/Adopt/Tree.gif", true),
+  () => setGifState("gifs-rows-adopt", "gif-file-adopt", "", false)
+);
+$("img", "#gifs-rows-MeetUp").hover(
+  () => setGifState("gifs-rows-MeetUp", "gif-file-MeetUp", "images/CornellMeetUp/Map1.PNG", true),
+  () => setGifState("gifs-rows-MeetUp", "gif-file-MeetUp", "", false)
+);
+$("img", "#gifs-rows-Egos").hover(
+  () => setGifState("gifs-rows-Egos", "gif-file-Egos", "images/Egos/Bootup.gif", true),
+  () => setGifState("gifs-rows-Egos", "gif-file-Egos", "", false)
+);
+$("img", "#gifs-rows-Uno").hover(
+  () => setGifState("gifs-rows-Uno", "gif-file-Uno", "images/Uno/photo2.PNG", true),
+  () => setGifState("gifs-rows-Uno", "gif-file-Uno", "", false)
+);
+$("img", "#gifs-rows-LinearRegression").hover(
+  () => setGifState("gifs-rows-LinearRegression", "gif-file-LinearRegression", "images/LinearRegression/gif4.gif", true),
+  () => setGifState("gifs-rows-LinearRegression", "gif-file-LinearRegression", "", false)
+);
+$("img", "#gifs-rows-critterworld").hover(
+  () => setGifState("gifs-rows-critterworld", "gif-file-critterworld", "images/CritterWorld/image7.png", true),
+  () => setGifState("gifs-rows-critterworld", "gif-file-critterworld", "", false)
+);
+$("img", "#gifs-rows-connect4").hover(
+  () => setGifState("gifs-rows-connect4", "gif-file-connect4", "images/Connect4/SmallerGIF.gif", true),
+  () => setGifState("gifs-rows-connect4", "gif-file-connect4", "", false)
+);
+$("img", "#gifs-rows-graph").hover(
+  () => setGifState("gifs-rows-graph", "gif-file-graph", "images/GraphSearchVisualizer/GIF 3.gif", true),
+  () => setGifState("gifs-rows-graph", "gif-file-graph", "", false)
+);
+$("img", "#gifs-rows-fulkerson").hover(
+  () => setGifState("gifs-rows-fulkerson", "gif-file-fulkerson", "images/FordFulkerson/AddNodesGIF.gif", true),
+  () => setGifState("gifs-rows-fulkerson", "gif-file-fulkerson", "", false)
+);
+$("img", "#gifs-rows-tanks").hover(
+  () => setGifState("gifs-rows-tanks", "gif-file-tanks", "images/Tanks/AIGIF.gif", true),
+  () => setGifState("gifs-rows-tanks", "gif-file-tanks", "", false)
+);
+$("img", "#gifs-rows-chess").hover(
+  () => setGifState("gifs-rows-chess", "gif-file-chess", "images/Chess/ScalingGIF.gif", true),
+  () => setGifState("gifs-rows-chess", "gif-file-chess", "", false)
+);
 
 const isTouchDevice = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
 if (isTouchDevice) {
@@ -100,20 +97,12 @@ if (isTouchDevice) {
     let touchMoved = false;
 
     const toggleGif = () => {
-      const preset = link.querySelector('img:not(.gif-file)');
-      const gif = link.querySelector('.gif-file');
-      if (!preset || !gif) {
+      const row = link.closest('.gif-row');
+      if (!row) {
         return;
       }
-      const gifVisible = window.getComputedStyle(gif).display !== 'none';
-      if (gifVisible) {
-        gif.style.display = 'none';
-        preset.style.display = 'block';
-      } else {
-        preset.style.display = 'none';
-        gif.style.display = 'block';
-        link.classList.add('tap-cue-seen');
-      }
+      row.classList.toggle('gif-active');
+      link.classList.add('tap-cue-seen');
     };
 
     link.addEventListener('touchstart', function(event) {
@@ -161,9 +150,13 @@ document.addEventListener("DOMContentLoaded", function() {
   const timelineItems = document.querySelectorAll('.timeline > li');
   const scrollTarget = document.getElementById('scroll-spot');
   const mainSection = document.getElementById('main-section');
+  const firstProjectCard = document.querySelector('#scroll-spot .card');
   let autoScrollTriggered = false;
+  const heroReadyAt = Date.now() + 800;
+  let autoScrollPending = false;
   const topThreshold = 5;
-  let allowAutoScroll = window.scrollY <= topThreshold;
+  let topSnapTriggered = false;
+  let lastSnapScrollY = window.scrollY;
   if (timelineItems.length) {
     timelineItems.forEach((item, index) => {
       item.style.setProperty('--timeline-delay', `${Math.min(index * 0.06, 0.3)}s`);
@@ -188,10 +181,10 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function shouldAutoScrollFromTop() {
-    if (!scrollTarget || !mainSection || autoScrollTriggered || !allowAutoScroll) {
+    if (!scrollTarget || !mainSection || autoScrollTriggered || Date.now() < heroReadyAt) {
       return false;
     }
-    const scrollThreshold = 200;
+    const scrollThreshold = 80;
     const hasScrolledEnough = window.scrollY >= scrollThreshold;
     return hasScrolledEnough;
   }
@@ -201,26 +194,75 @@ document.addEventListener("DOMContentLoaded", function() {
       return;
     }
     autoScrollTriggered = true;
-    allowAutoScroll = false;
     scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
+  function updateAutoScrollState() {
+    if (window.scrollY <= topThreshold) {
+      autoScrollTriggered = false;
+      return;
+    }
+  }
+
   window.addEventListener('scroll', handleTopScroll, { passive: true });
+  window.addEventListener('scroll', updateAutoScrollState, { passive: true });
+  window.addEventListener('scroll', () => {
+    if (autoScrollTriggered) {
+      return;
+    }
+    if (Date.now() < heroReadyAt) {
+      const scrollThreshold = 80;
+      autoScrollPending = window.scrollY >= scrollThreshold;
+      setTimeout(() => {
+        if (autoScrollPending && !autoScrollTriggered) {
+          handleTopScroll();
+          autoScrollPending = false;
+        }
+      }, Math.max(heroReadyAt - Date.now(), 0));
+    }
+  }, { passive: true });
   window.addEventListener('load', () => {
     if (window.scrollY > topThreshold) {
-      allowAutoScroll = false;
+      autoScrollTriggered = true;
     }
   });
   window.addEventListener('pageshow', () => {
     if (window.scrollY > topThreshold) {
-      allowAutoScroll = false;
+      autoScrollTriggered = true;
     }
   });
   setTimeout(() => {
     if (window.scrollY > topThreshold) {
-      allowAutoScroll = false;
+      autoScrollTriggered = true;
     }
   }, 250);
+
+  function handleTopProjectSnap() {
+    if (!firstProjectCard) {
+      return;
+    }
+    const currentScrollY = window.scrollY;
+    const isScrollingUp = currentScrollY < lastSnapScrollY;
+    lastSnapScrollY = currentScrollY;
+
+    const firstCardRect = firstProjectCard.getBoundingClientRect();
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const coverThreshold = isMobile ? 0.05 : 0.5;
+    const coveredFraction = Math.max(0, firstCardRect.top) / firstCardRect.height;
+    const shouldSnapUp = isScrollingUp && coveredFraction >= coverThreshold;
+
+    if (shouldSnapUp && !topSnapTriggered) {
+      topSnapTriggered = true;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (firstCardRect.top < window.innerHeight * 0.3) {
+      topSnapTriggered = false;
+    }
+  }
+
+  window.addEventListener('scroll', handleTopProjectSnap, { passive: true });
 
 });
 

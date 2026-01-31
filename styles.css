@@ -11667,6 +11667,7 @@ textarea.form-control-lg {
   padding: 2px;
   border-radius: 18px;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+  position: relative;
 }
 .gif-row img {
   cursor: pointer;
@@ -11674,13 +11675,29 @@ textarea.form-control-lg {
   height: 320px;
   object-fit: cover;
   display: block;
+  transition: opacity 0.2s ease;
 }
 
 .gif-row .gif-file {
   width: 100%;
   height: 320px;
   object-fit: cover;
-  display: none;
+  display: block;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.gif-row.gif-active .gif-file {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gif-row.gif-active img:not(.gif-file) {
+  opacity: 0;
 }
 
 .image-links{
@@ -12061,6 +12078,10 @@ textarea.form-control-lg {
 }
 html,body{
     overflow-x: hidden;
+}
+
+body {
+  zoom: 0.9;
 }
 
 .navbar-custom .nav-link {
