@@ -12107,6 +12107,11 @@ html,body{
   position: relative;
   min-height: 50px;
   margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: transform 0.4s cubic-bezier(0.18, 0.75, 0.25, 1), opacity 0.4s ease;
+  transition-delay: var(--timeline-delay, 0s);
+  will-change: transform, opacity;
 }
 .timeline > li:after, .timeline > li:before {
   display: table;
@@ -12195,6 +12200,31 @@ html,body{
 
 .timeline-text-card .text-muted {
   color: var(--brand-gray-300);
+}
+
+.timeline > li.timeline-in-view .timeline-text-card {
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.45),
+    0 0 28px rgba(178, 30, 30, 0.18);
+}
+
+.timeline > li.timeline-exit .timeline-text-card {
+  box-shadow:
+    0 18px 46px rgba(0, 0, 0, 0.55),
+    0 0 36px rgba(178, 30, 30, 0.28);
+}
+
+.timeline .timeline-heading h4 {
+  letter-spacing: 0.02em;
+}
+
+.timeline .timeline-heading p {
+  margin-bottom: 0.35rem;
+  color: var(--brand-gray-300);
+}
+
+.timeline .timeline-body > p {
+  line-height: 1.6;
 }
 
 @media (min-width: 768px) {
@@ -12289,9 +12319,6 @@ html,body{
 .timeline-panel {
   margin-top: 25px;
   margin-bottom: 25px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .timeline-inverted {
@@ -12299,10 +12326,28 @@ html,body{
   margin-bottom: 25px;
 }
 
-/* State when the element is in the viewport */
-.timeline-panel.in-view {
+/* Timeline motion states */
+.timeline > li.timeline-in-view {
   opacity: 1;
   transform: translateY(0);
+}
+
+.timeline > li.timeline-exit {
+  opacity: 0;
+  transform: translateY(-160px) scale(0.95);
+  transition-delay: 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline > li {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .timeline > li.timeline-in-view .timeline-text-card,
+  .timeline > li.timeline-exit .timeline-text-card {
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+  }
 }
 
 .navbar-custom .navbar-nav {
@@ -12315,11 +12360,8 @@ html,body{
 .about-intro {
   max-width: 980px;
   margin: 0 auto 1.5rem;
-  padding: 1.5rem 2rem;
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(23, 23, 27, 0.95) 0%, rgba(15, 15, 18, 0.95) 100%);
-  border: 1px solid rgba(178, 30, 30, 0.25);
-  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.35);
+  display: grid;
+  gap: 1.5rem;
 }
 .about-profile {
   margin-top: clamp(2.5rem, 5vw, 4.5rem);
@@ -12329,12 +12371,29 @@ html,body{
   padding-bottom: clamp(3.5rem, 6vw, 6rem);
 }
 .about-intro-text {
-  text-align: center;
+  text-align: left;
   color: var(--brand-white);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 .about-intro-text:last-child {
   margin-bottom: 0;
+}
+.about-intro-card {
+  padding: 1.6rem 1.8rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(18, 18, 18, 0.85), rgba(34, 34, 34, 0.8));
+  border: 1px solid rgba(178, 30, 30, 0.2);
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.35);
+}
+.about-intro-card-right {
+  background: linear-gradient(135deg, rgba(22, 22, 22, 0.85), rgba(40, 40, 40, 0.8));
+}
+.about-intro-card-title {
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  color: var(--brand-gray-300);
 }
 .about-intro a {
   color: var(--brand-red);
@@ -12342,6 +12401,12 @@ html,body{
 }
 .about-intro a:hover {
   color: var(--brand-red-soft);
+}
+
+@media (min-width: 992px) {
+  .about-intro {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -12999,6 +13064,12 @@ a:hover {
   margin-bottom: 0;
   color: var(--brand-white);
   border-color: rgba(148, 148, 148, 0.2);
+}
+.courses-table > :not(caption) > * > * {
+  border-color: rgba(148, 148, 148, 0.2);
+}
+.courses-table > :not(:first-child) {
+  border-top: 1px solid rgba(148, 148, 148, 0.2);
 }
 
 .courses-table thead th {

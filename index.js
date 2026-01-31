@@ -158,31 +158,34 @@ if (isTouchDevice) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  const timelinePanels = document.querySelectorAll('.timeline-panel');
+  const timelineItems = document.querySelectorAll('.timeline > li');
   const scrollTarget = document.getElementById('scroll-spot');
   const mainSection = document.getElementById('main-section');
   let autoScrollTriggered = false;
   const topThreshold = 5;
   let allowAutoScroll = window.scrollY <= topThreshold;
+  if (timelineItems.length) {
+    timelineItems.forEach((item, index) => {
+      item.style.setProperty('--timeline-delay', `${Math.min(index * 0.06, 0.3)}s`);
+    });
 
-  function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-    return rect.top < viewportHeight * 0.9 && rect.bottom > 0;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('timeline-in-view');
+          entry.target.classList.remove('timeline-exit');
+        } else if (entry.boundingClientRect.top < 0) {
+          entry.target.classList.add('timeline-exit');
+          entry.target.classList.remove('timeline-in-view');
+        } else {
+          entry.target.classList.remove('timeline-in-view');
+          entry.target.classList.remove('timeline-exit');
+        }
+      });
+    }, { threshold: 0.2, rootMargin: '0px 0px -15% 0px' });
+
+    timelineItems.forEach((item) => observer.observe(item));
   }
-
-  function fadeInOnScroll() {
-    for (let i = 0; i < timelinePanels.length; i++) {
-      if (isInViewport(timelinePanels[i])) {
-        timelinePanels[i].classList.add('in-view');
-      }
-    }
-  }
-
-  window.addEventListener('scroll', fadeInOnScroll, { passive: true });
-  window.addEventListener('resize', fadeInOnScroll);
-  window.addEventListener('load', fadeInOnScroll);
-  fadeInOnScroll();
 
   function shouldAutoScrollFromTop() {
     if (!scrollTarget || !mainSection || autoScrollTriggered || !allowAutoScroll) {
@@ -218,6 +221,7 @@ document.addEventListener("DOMContentLoaded", function() {
       allowAutoScroll = false;
     }
   }, 250);
+
 });
 
 
