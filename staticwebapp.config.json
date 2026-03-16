@@ -1,0 +1,25 @@
+{
+  "routes": [
+    {
+      "route": "/index.html",
+      "redirect": "/",
+      "statusCode": 301
+    },
+    {
+      "route": "/about",
+      "rewrite": "/about.html"
+    },
+    {
+      "route": "/contact",
+      "rewrite": "/contact.html"
+    },
+    {
+      "route": "/resume",
+      "rewrite": "/resume.html"
+    },
+    {
+      "route": "/easypc",
+      "rewrite": "/easypc.html"
+    }
+  ]
+}
