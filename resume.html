@@ -26,93 +26,97 @@
 </head>
 
 <body style="background-color: var(--brand-black);">
-  <div class="ambient-blur-field" aria-hidden="true">
-    <span class="ambient-blur"></span>
-    <span class="ambient-blur"></span>
-    <span class="ambient-blur"></span>
-    <span class="ambient-blur"></span>
-    <span class="ambient-blur"></span>
-    <span class="ambient-blur"></span>
-    <span class="ambient-blur"></span>
-    <span class="ambient-blur"></span>
-    <span class="ambient-blur"></span>
-    <span class="ambient-blur"></span>
-  </div>
-  <header>
-    <div style="background-color: var(--brand-red);">
-      <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" style="background-color: var(--brand-red);">
+  <div class="site-zoom">
+    <div class="ambient-blur-field" aria-hidden="true">
+      <span class="ambient-blur"></span>
+      <span class="ambient-blur"></span>
+      <span class="ambient-blur"></span>
+      <span class="ambient-blur"></span>
+      <span class="ambient-blur"></span>
+      <span class="ambient-blur"></span>
+      <span class="ambient-blur"></span>
+      <span class="ambient-blur"></span>
+      <span class="ambient-blur"></span>
+      <span class="ambient-blur"></span>
+    </div>
+    <header>
+      <div style="background-color: var(--brand-red);">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" style="background-color: var(--brand-red);">
+          <div class="container">
+            <div class="navbar-brand d-flex align-items-center highlight">
+              <img id="profile-pic" src="images/PFP.jpg" alt="Mitchell Gray">
+              <strong id="name">Mitchell Gray</strong>
+              <strong id="underscore">_</strong>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://mitchellegray.com/">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://mitchellegray.com/about">About Me</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://mitchellegray.com/resume">Resume</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://mitchellegray.com/contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="resume-main">
+      <section class="resume-hero">
+        <div class="container resume-hero-inner">
+          <div class="resume-hero-text">
+            <p class="resume-eyebrow">Resume</p>
+            <h1 class="resume-title">My Resume</h1>
+            <p class="resume-lead">View the PDF below or download a copy for offline use.</p>
+            <div class="resume-actions">
+              <a class="btn btn-primary" href="Mitchell_Gray_Resume.pdf" target="_blank" rel="noopener">Open PDF</a>
+              <a class="btn btn-outline-secondary" href="Mitchell_Gray_Resume.pdf" download>Download</a>
+            </div>
+          </div>
+          <div class="resume-highlight">
+            <div class="resume-highlight-card">
+              <p class="resume-highlight-title">Quick access</p>
+              <p class="resume-highlight-body">If the embedded viewer does not load, use the buttons to open the PDF in a new tab or download it directly.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+      <section class="resume-viewer">
         <div class="container">
-          <div class="navbar-brand d-flex align-items-center highlight">
-            <img id="profile-pic" src="images/PFP.jpg" alt="Mitchell Gray">
-            <strong id="name">Mitchell Gray</strong>
-            <strong id="underscore">_</strong>
-          </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="https://mitchellegray.com/">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://mitchellegray.com/about">About Me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://mitchellegray.com/resume">Resume</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://mitchellegray.com/contact">Contact</a>
-              </li>
-            </ul>
+          <div class="resume-card">
+            <iframe
+              class="resume-frame"
+              src="Mitchell_Gray_Resume.pdf"
+              title="Mitchell Gray Resume PDF"
+            ></iframe>
           </div>
         </div>
-      </nav>
+      </section>
+    </main>
+    <div class="site-zoom">
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-meta">
+          <p class="footer-name">Mitchell Gray &copy; 2026</p>
+          <p class="footer-contact">mgray88@gatech.edu</p>
+          <p class="footer-contact">meg346@cornell.edu</p>
+        </div>
+        <a class="footer-top" href="#">Back to top</a>
+      </div>
+    </footer>
     </div>
-  </header>
-
-  <main class="resume-main">
-    <section class="resume-hero">
-      <div class="container resume-hero-inner">
-        <div class="resume-hero-text">
-          <p class="resume-eyebrow">Resume</p>
-          <h1 class="resume-title">My Resume</h1>
-          <p class="resume-lead">View the PDF below or download a copy for offline use.</p>
-          <div class="resume-actions">
-            <a class="btn btn-primary" href="Mitchell_Gray_Resume.pdf" target="_blank" rel="noopener">Open PDF</a>
-            <a class="btn btn-outline-secondary" href="Mitchell_Gray_Resume.pdf" download>Download</a>
-          </div>
-        </div>
-        <div class="resume-highlight">
-          <div class="resume-highlight-card">
-            <p class="resume-highlight-title">Quick access</p>
-            <p class="resume-highlight-body">If the embedded viewer does not load, use the buttons to open the PDF in a new tab or download it directly.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="resume-viewer">
-      <div class="container">
-        <div class="resume-card">
-          <object class="resume-frame" data="Mitchell_Gray_Resume.pdf#view=Fit" type="application/pdf">
-            <p class="resume-fallback">Your browser could not display the PDF. <a href="Mitchell_Gray_Resume.pdf" target="_blank" rel="noopener">Open it in a new tab</a> or <a href="Mitchell_Gray_Resume.pdf" download>download it here</a>.</p>
-          </object>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-meta">
-        <p class="footer-name">Mitchell Gray &copy; 2026</p>
-        <p class="footer-contact">mgray88@gatech.edu</p>
-        <p class="footer-contact">meg346@cornell.edu</p>
-      </div>
-      <a class="footer-top" href="#">Back to top</a>
-    </div>
-  </footer>
 </body>
 
 </html>

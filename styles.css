@@ -12080,7 +12080,7 @@ html,body{
     overflow-x: hidden;
 }
 
-body {
+.site-zoom {
   zoom: 0.9;
 }
 
