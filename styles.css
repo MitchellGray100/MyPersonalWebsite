@@ -11941,6 +11941,11 @@ textarea.form-control-lg {
   animation-name: gif-fadein;
   animation-iteration-count: 1;
 }
+#gif-file-miniten{
+  animation-duration: 2s;
+  animation-name: gif-fadein;
+  animation-iteration-count: 1;
+}
 #gif-file-pointcloud{
   animation-duration: 2s;
   animation-name: gif-fadein;
