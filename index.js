@@ -31,7 +31,7 @@ $("img", "#gifs-rows-nosi").hover(
   () => setGifState("gifs-rows-nosi", "gif-file-nosi", "", false)
 );
 $("img", "#gifs-rows-miniten").hover(
-  () => setGifState("gifs-rows-miniten", "gif-file-miniten", "images/Miniten/MiniTen System Design.png", true),
+  () => setGifState("gifs-rows-miniten", "gif-file-miniten", "images/Miniten/MinitenStreamingDemo.gif", true),
   () => setGifState("gifs-rows-miniten", "gif-file-miniten", "", false)
 );
 $("img", "#gifs-rows-Speed").hover(
